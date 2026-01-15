@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+/* Moonlit Home Decor Design System - Cottagecore Aesthetic */
+
+@layer base {
+  :root {
+    /* Core backgrounds - warm cream tones */
+    --background: 40 33% 97%;
+    --foreground: 25 20% 20%;
+
+    /* Cards with subtle warmth */
+    --card: 40 40% 98%;
+    --card-foreground: 25 20% 20%;
+
+    --popover: 40 40% 98%;
+    --popover-foreground: 25 20% 20%;
+
+    /* Primary - Sage Green */
+    --primary: 142 25% 45%;
+    --primary-foreground: 40 40% 98%;
+
+    /* Secondary - Dusty Rose */
+    --secondary: 10 30% 90%;
+    --secondary-foreground: 10 30% 30%;
+
+    /* Muted - Soft Taupe */
+    --muted: 30 15% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    /* Accent - Warm Terracotta */
+    --accent: 20 50% 85%;
+    --accent-foreground: 20 40% 25%;
+
+    /* Highlight - Soft Gold */
+    --highlight: 42 70% 75%;
+    --highlight-foreground: 42 60% 20%;
+
+    /* Forest - Deep Green for contrast */
+    --forest: 150 30% 25%;
+    --forest-foreground: 40 40% 98%;
+
+    /* Blush - Pink accents */
+    --blush: 350 35% 85%;
+    --blush-foreground: 350 30% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 142 25% 45%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(40 33% 97%) 0%, hsl(30 30% 93%) 50%, hsl(40 35% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(40 40% 99%) 0%, hsl(40 35% 96%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(25 20% 20% / 0) 0%, hsla(25 20% 20% / 0.6) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsla(25 20% 20% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsla(25 20% 20% / 0.12);
+    --shadow-hover: 0 12px 40px -12px hsla(25 20% 20% / 0.18);
+
+    /* Sidebar */
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 25 20% 20%;
+    --sidebar-primary: 142 25% 45%;
+    --sidebar-primary-foreground: 40 40% 98%;
+    --sidebar-accent: 30 15% 92%;
+    --sidebar-accent-foreground: 25 20% 20%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 142 25% 45%;
+  }
+
+  .dark {
+    --background: 25 20% 10%;
+    --foreground: 40 33% 95%;
+
+    --card: 25 18% 14%;
+    --card-foreground: 40 33% 95%;
+
+    --popover: 25 18% 14%;
+    --popover-foreground: 40 33% 95%;
+
+    --primary: 142 30% 55%;
+    --primary-foreground: 25 20% 10%;
+
+    --secondary: 10 20% 20%;
+    --secondary-foreground: 10 30% 85%;
+
+    --muted: 25 15% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 20 35% 25%;
+    --accent-foreground: 20 40% 90%;
+
+    --highlight: 42 50% 45%;
+    --highlight-foreground: 42 60% 95%;
+
+    --forest: 150 25% 40%;
+    --forest-foreground: 40 40% 98%;
+
+    --blush: 350 25% 30%;
+    --blush-foreground: 350 30% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 142 30% 55%;
+
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 40 33% 95%;
+    --sidebar-primary: 142 30% 55%;
+    --sidebar-primary-foreground: 25 20% 10%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 40 33% 95%;
+    --sidebar-border: 25 15% 22%;
+    --sidebar-ring: 142 30% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-[1px] bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .category-card {
+    @apply relative overflow-hidden rounded-xl cursor-pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .category-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  .category-card::after {
+    @apply content-[''] absolute inset-0 pointer-events-none;
+    background: var(--gradient-overlay);
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif font-medium text-foreground tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground font-light max-w-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-full font-sans font-medium transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border border-foreground/20 text-foreground hover:bg-foreground hover:text-background px-6 py-3 rounded-full font-sans font-medium transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
