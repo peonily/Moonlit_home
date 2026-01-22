@@ -47,13 +47,13 @@ export function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="#"
+              <Link
+                to="/wishlist"
                 className="w-10 h-10 rounded-full bg-forest-foreground/10 flex items-center justify-center hover:bg-forest-foreground/20 transition-colors"
                 aria-label="Favorites"
               >
                 <Heart className="w-5 h-5" />
-              </a>
+              </Link>
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-forest-foreground/10 flex items-center justify-center hover:bg-forest-foreground/20 transition-colors"

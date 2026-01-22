@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Heart } from "lucide-react";
 
 const roomCategories = [
   { name: "Living Room", href: "/rooms/living-room" },
@@ -44,9 +44,9 @@ export function Header() {
             <Link to="/" className="nav-link text-sm font-medium tracking-wide uppercase">
               Home
             </Link>
-            
+
             {/* Categories Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setCategoriesOpen(true)}
               onMouseLeave={() => setCategoriesOpen(false)}
@@ -55,7 +55,7 @@ export function Header() {
                 Categories
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
+
               <AnimatePresence>
                 {categoriesOpen && (
                   <motion.div
@@ -104,15 +104,24 @@ export function Header() {
             <Link to="/about" className="nav-link text-sm font-medium tracking-wide uppercase">
               About
             </Link>
+            <Link to="/wishlist" className="p-2 text-foreground hover:text-primary transition-colors" aria-label="Wishlist">
+              <Heart className="w-5 h-5" />
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2">
+            <Link to="/wishlist" className="lg:hidden p-2 text-foreground" aria-label="Wishlist">
+              <Heart className="w-5 h-5" />
+            </Link>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
