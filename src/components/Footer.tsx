@@ -120,7 +120,7 @@ export function Footer() {
         <div className="border-t border-forest-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-forest-foreground/60 text-sm">
-              © 2024 Moonlit Home Decor. All rights reserved.
+              © Moonlit Home Decor. All rights reserved.
             </p>
             <p className="text-forest-foreground/60 text-sm">
               Made with love for beautiful homes ✨
