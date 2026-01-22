@@ -49,7 +49,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-serif font-medium mb-1">Follow Our Journey</h3>
-                                        <p className="text-muted-foreground">@MoonlitHomeDecor</p>
+                                        <p className="text-muted-foreground">@moonlithome27</p>
                                         <p className="text-sm text-forest mt-1">Daily inspirations & community stories</p>
                                     </div>
                                 </div>
