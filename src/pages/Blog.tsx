@@ -9,6 +9,7 @@ const blogPosts = [
         title: "The Art of Cottagecore: Creating Your Own Rural Sanctuary",
         excerpt: "Discover the magic of slow living and how to infuse your home with the nostalgic charm of the English countryside.",
         category: "Cottagecore",
+        image: "/assets/blog/cottagecore-blog.png",
         content: "Cottagecore is more than just an aesthetic; it's a movement towards simplicity and a deep connection with nature. To bring this into your home, focus on natural materials like wood and linen, floral patterns, and vintage-inspired decor. Think dried flowers in ceramic vases, lace tablecloths, and an abundance of cozy textiles."
     },
     {
@@ -16,6 +17,7 @@ const blogPosts = [
         title: "Dark Academia: A Guide to the Scholarly Aesthetic",
         excerpt: "Transform your space into a moody, intellectual retreat inspired by classic literature and vintage university life.",
         category: "Dark Academia",
+        image: "/assets/blog/dark-academia-blog.png",
         content: "Dark Academia celebrates curiosity, history, and a touch of mystery. Its color palette is rich and deep—forest greens, burgundies, and dark browns. Key elements include towering bookshelves, leather-bound volumes, brass accents, and moody task lighting. It's about creating an atmosphere that invites study and reflection."
     },
     {
@@ -23,6 +25,7 @@ const blogPosts = [
         title: "Mastering Modern Decor: Sleek, Functional, and Timeless",
         excerpt: "Learn how to balance clean lines with comfort for a contemporary space that feels both minimal and inviting.",
         category: "Modern",
+        image: "/assets/blog/modern-blog.png",
         content: "Modern design is characterized by its emphasis on function and form. It favors open spaces, geometric shapes, and a restrained color palette often punctuated by bold accents. To achieve this look, choose furniture with clean silhouettes, utilize smooth surfaces like glass or polished stone, and keep clutter to a minimum to let the architecture of the space shine."
     }
 ];
@@ -71,11 +74,13 @@ const Blog = () => {
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                     className="bg-card rounded-2xl border border-border overflow-hidden shadow-soft hover:shadow-card transition-all duration-300"
                                 >
-                                    {/* Placeholder with themed icons */}
-                                    <div className={`h-48 flex items-center justify-center p-8 transition-colors duration-300 ${post.category === 'Cottagecore' ? 'bg-[#E8F0E8]' :
-                                            post.category === 'Dark Academia' ? 'bg-[#E5E7EB]' : 'bg-[#F3F4F6]'
-                                        }`}>
-                                        <span className="text-5xl">{post.category === 'Cottagecore' ? '🌿' : post.category === 'Dark Academia' ? '📚' : '✨'}</span>
+                                    {/* Blog Post Cover Image */}
+                                    <div className="h-56 overflow-hidden">
+                                        <img
+                                            src={post.image}
+                                            alt={post.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                        />
                                     </div>
 
                                     <div className="p-8">
