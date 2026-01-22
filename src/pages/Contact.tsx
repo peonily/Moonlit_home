@@ -39,8 +39,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-serif font-medium mb-1">Email Us</h3>
-                                        <p className="text-muted-foreground mb-1">General Inquiries: hello@moonlithomedecor.com</p>
-                                        <p className="text-muted-foreground">Collaborations: partner@moonlithomedecor.com</p>
+                                        <p className="text-muted-foreground mb-1">moonlithome27@gmail.com</p>
                                     </div>
                                 </div>
 
@@ -55,18 +54,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center shrink-0">
-                                        <MapPin className="w-6 h-6 text-forest" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-serif font-medium mb-1">Our Studio</h3>
-                                        <p className="text-muted-foreground">
-                                            Based in the heart of the Pacific Northwest,<br />
-                                            where the evergreens meet the moon.
-                                        </p>
-                                    </div>
-                                </div>
+
                             </motion.div>
 
                             {/* Contact Form */}

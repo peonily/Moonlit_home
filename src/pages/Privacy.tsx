@@ -83,7 +83,7 @@ const PrivacyPolicy = () => {
                                 <p>
                                     If you have any questions about this Privacy Policy, please contact us at:
                                     <br />
-                                    <span className="text-forest font-medium">hello@moonlithomedecor.com</span>
+                                    <span className="text-forest font-medium">moonlithome27@gmail.com</span>
                                 </p>
                             </section>
 
