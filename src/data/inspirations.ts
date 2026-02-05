@@ -35,24 +35,24 @@ export const inspirations: Inspiration[] = [
             },
             {
                 id: "sofa-01",
-                name: "CHITA Modular Sectional Sofa",
+                name: "Floating Picture Ledge Shelves for Wall Set of 4, 24 Inch Wall",
                 description: "Experience ultimate comfort with this modular L-shaped sectional. Featuring FSC certified wood and high-density foam, it offers a perfect blend of sustainability and relaxation for your living room.",
                 link: "https://amzn.to/4abnKKG",
-                image: "/assets/products/modular-sofa.jpg",
+                image: "/assets/products/2.png",
             },
             {
                 id: "table-01",
                 name: "Plank+Beam Solid Oak Coffee Table",
                 description: "A solid oak coffee table with a rustic blonde wirebrush finish. Its round 36-inch design makes it ideal for gathering around in cozy, minimalist spaces.",
                 link: "https://amzn.to/3M5YRbq",
-                image: "/assets/products/round-coffee-table.jpg",
+                image: "/assets/products/3.png",
             },
             {
                 id: "shelves-01",
-                name: "Modern Oak Picture Ledge Shelves",
+                name: "Vintage Living Room Area Rug 5x8",
                 description: "Set of 4 floating shelves designed with a safety lip. Perfect for displaying your favorite art, photos, and small plants without taking up floor space.",
                 link: "https://amzn.to/46qbEft",
-                image: "/assets/products/floating-shelves.jpg",
+                image: "/assets/products/Screenshot_30.png",
             }
         ]
     }
