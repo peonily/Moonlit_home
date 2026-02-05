@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import { inspirations } from "@/data/inspirations";
+import { InspirationCard } from "@/components/InspirationCard";
 
 const categoryData = {
     rooms: {
@@ -16,15 +18,17 @@ const categoryData = {
         "cottagecore": { name: "Cottagecore", desc: "Nostalgic, rural-inspired aesthetics emphasizing simple living." },
         "modern": { name: "Modern", desc: "Clean lines, functional forms, and minimalist elegance." },
         "bohemian": { name: "Bohemian", desc: "Free-spirited, global-inspired decor with rich textures." },
-        "dark-academia": { name: "Dark Academia", desc: "Intellectual, moody vibes inspired by classic literature and libraries." },
+        "modern-classic": { name: "Modern Classic", desc: "Timeless sophistication meets contemporary comfort." },
         "minimalist": { name: "Minimalist", desc: "Finding beauty in simplicity and intentional space." }
     }
 };
 
 const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' }) => {
-    const { id } = useParams<{ id: string }>();
+    const { id = "" } = useParams<{ id: string }>();
     // @ts-ignore
-    const data = categoryData[type][id || ""] || { name: "Collection", desc: "Explore our curated inspirations." };
+    const data = categoryData[type][id] || { name: "Collection", desc: "Explore our curated inspirations." };
+
+    const filteredInspirations = inspirations.filter(ins => ins.categories.includes(id));
 
     return (
         <div className="min-h-screen bg-background">
@@ -48,24 +52,19 @@ const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' }) => {
                         </p>
                     </motion.div>
 
-                    {/* Placeholder for actual gallery/products */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[1, 2, 3, 4, 5, 6].map((i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="aspect-square bg-muted/30 rounded-2xl border border-dashed border-border flex items-center justify-center text-muted-foreground group hover:bg-muted/50 transition-colors"
-                            >
-                                <div className="text-center">
-                                    <span className="block text-2xl mb-2 opacity-50">✨</span>
-                                    <span className="text-sm font-light">Inspiration {i} Coming Soon</span>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {filteredInspirations.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                            {filteredInspirations.map((ins, index) => (
+                                <InspirationCard key={ins.id} inspiration={ins} index={index} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-20 bg-muted/20 rounded-3xl border border-dashed border-border">
+                            <span className="block text-4xl mb-4 opacity-50">✨</span>
+                            <h3 className="text-xl font-medium text-forest mb-2">More Inspirations Coming Soon</h3>
+                            <p className="text-muted-foreground">We're currently curating the perfect looks for this collection.</p>
+                        </div>
+                    )}
                 </section>
             </main>
             <Footer />
@@ -74,3 +73,4 @@ const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' }) => {
 };
 
 export default CategoryDetail;
+

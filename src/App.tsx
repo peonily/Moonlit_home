@@ -9,6 +9,8 @@ import Blog from "./pages/Blog";
 import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
 import CategoryDetail from "./pages/CategoryDetail";
+import InspirationDetail from "./pages/InspirationDetail";
+import ProductDetail from "./pages/ProductDetail";
 import Wishlist from "./pages/Wishlist";
 import NotFound from "./pages/NotFound";
 
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/rooms/:id" element={<CategoryDetail type="rooms" />} />
           <Route path="/styles/:id" element={<CategoryDetail type="styles" />} />
+          <Route path="/inspiration/:slug" element={<InspirationDetail />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/wishlist" element={<Wishlist />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
@@ -36,5 +40,6 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
+
 
 export default App;
