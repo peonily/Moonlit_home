@@ -255,5 +255,47 @@ export const inspirations: Inspiration[] = [
                 price: "$63.06"
             }
         ]
+    },
+    {
+        id: "cozy-white-sectional-inspiration",
+        slug: "cozy-white-sectional-living-room",
+        categories: ["living-room", "bohemian"],
+        image: "/assets/products/Cozy White Sectional Living Room Decor.jpg",
+        name: "Cozy White Sectional Living Room Decor",
+        description: "A serene and cozy living room featuring a plush white sectional sofa, layered textures, and natural wood accents. This Bohemian-inspired space balances modern comfort with organic elements, creating a peaceful sanctuary for relaxation and gathering.",
+        products: [
+            {
+                id: "modular-memory-foam-couch-01",
+                name: "Modular Memory Foam Couches for Living Room",
+                description: "Experience cloud-like comfort with this modular memory foam sectional. Designed for ultimate versatility and style, it features high-density foam and durable upholstery that withstands daily life while maintaining a chic, bohemian aesthetic.",
+                link: "https://amzn.to/3ZVdHEI",
+                image: "/assets/products/Modular Memory Foam Couches for Living Room.png",
+                price: "$563.03"
+            },
+            {
+                id: "jute-pouf-ottoman-01",
+                name: "Jute Circular Jute Pouf Ottoman - Braided Pouffe Accent Sitting",
+                description: "Hand-braided from natural fiber, this circular jute pouf adds organic texture and rustic charm to your space. Perfect as a casual seat, footrest, or side table, it's a versatile piece that complements any bohemian or coastal interior.",
+                link: "https://amzn.to/4aiRcP5",
+                image: "/assets/products/Jute Circular Jute Pouf Ottoman - Braided Pouffe Accent Sitting.png",
+                price: "$72.99"
+            },
+            {
+                id: "triple-wide-bookshelf-01",
+                name: "Bookshelf Triple Wide Wood Bookcase Storage with Adjustable Shelves",
+                description: "An elegant and spacious storage solution, this triple-wide wood bookcase features adjustable shelves to accommodate your favorite books and decor. Its natural wood finish and sturdy design make it a focal point in any living room or home office.",
+                link: "https://amzn.to/4cd79IU",
+                image: "/assets/products/Bookshelf Triple Wide Wood Bookcase Storage with Adjustable Shelves.png",
+                price: "$649.99"
+            },
+            {
+                id: "round-end-table-01",
+                name: "Round End Table with 3 Storage Shelves for Living Room",
+                description: "Keep your essentials within reach with this stylish round end table. Featuring three tiers of open storage, it's perfect for displaying plants, lamps, or books. Its slim profile and warm finish enhance the cozy vibes of your bohemian living space.",
+                link: "https://amzn.to/3O0zUib",
+                image: "/assets/products/Round End Table with 3 Storage Shelves for Living Room.png",
+                price: "$59.99"
+            }
+        ]
     }
 ];
