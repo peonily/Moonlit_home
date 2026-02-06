@@ -19,7 +19,8 @@ const categoryData = {
         "modern": { name: "Modern", desc: "Clean lines, functional forms, and minimalist elegance." },
         "bohemian": { name: "Bohemian", desc: "Free-spirited, global-inspired decor with rich textures." },
         "modern-classic": { name: "Modern Classic", desc: "Timeless sophistication meets contemporary comfort." },
-        "minimalist": { name: "Minimalist", desc: "Finding beauty in simplicity and intentional space." }
+        "minimalist": { name: "Minimalist", desc: "Finding beauty in simplicity and intentional space." },
+        "country": { name: "Country", desc: "Rustic charm and pastoral elegance for a warm, lived-in feel." }
     }
 };
 

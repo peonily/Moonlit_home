@@ -213,5 +213,47 @@ export const inspirations: Inspiration[] = [
                 price: "$64.99"
             }
         ]
+    },
+    {
+        id: "gold-ornate-mirror-inspiration",
+        slug: "gold-ornate-mirror-decor-inspiration",
+        categories: ["living-room", "country"],
+        image: "/assets/products/Gold Ornate Mirror Decor Inspiration.jpg",
+        name: "Vintage Gold Ornate Mirror Living Room Inspiration",
+        description: "Embrace the timeless elegance of country-style living with this curated collection. Featuring a stunning gold ornate mirror as the focal point, complemented by soft rose velvet textures and rustic wooden accents, this design captures the perfect balance of vintage charm and modern comfort.",
+        products: [
+            {
+                id: "velvet-sofa-rose",
+                name: "Valour Performance Velvet Sofa, Dusty Rose",
+                description: "This elegant dusty rose velvet sofa combines mid-century modern design with luxurious comfort. Featuring high-density foam padding and stain-resistant performance velvet, it's the perfect centerpiece for a sophisticated living room. Its gold-finished legs add a touch of glamour to the rustic country aesthetic.",
+                link: "https://amzn.to/4rurRsg",
+                image: "/assets/products/Valour Performance Velvet Sofa, Dusty Rose.png",
+                price: "$451.78"
+            },
+            {
+                id: "ornate-gold-mirror",
+                name: "Ornate Baroque Vintage Gold Mirror",
+                description: "Add a touch of historic grandeur to your home with this Ornate Baroque Vintage Gold Mirror. Crafted with intricate floral details and a classic gold finish, this mirror serves as a breathtaking focal point in any room. Perfect for reflecting light and creating an airy, luxurious feel in your country-style decor.",
+                link: "https://amzn.to/4kovpKm",
+                image: "/assets/products/Ornate Baroque Vintage Gold Mirror.png",
+                price: "$118.73"
+            },
+            {
+                id: "wooden-center-table",
+                name: "Wooden Center Table with Storage, Rectangle Living Room Table",
+                description: "This functional yet stylish wooden center table brings natural warmth to your living space. Featuring a spacious tabletop and convenient storage compartment, it's ideal for keeping your living room organized. Its sturdy construction and timeless wooden finish make it a perfect fit for country and bohemian-inspired interiors.",
+                link: "https://amzn.to/3ZSnhYX",
+                image: "/assets/products/Wooden Center Table with Storage, Rectangle Living Room Table.png",
+                price: "$129.99"
+            },
+            {
+                id: "bohemian-shag-rug",
+                name: "Flash Furniture Roxy Geometric Style Bohemian Shag Area Rug",
+                description: "Transform your floor with the Roxy Geometric Bohemian Shag Rug. Featuring a plush pile height and a stylish geometric pattern, this rug adds texture and warmth to your living space. Its neutral tones and bohemian flair make it a versatile addition to any country or modern home decor.",
+                link: "https://amzn.to/4qjV3B8",
+                image: "/assets/products/Flash Furniture Roxy Geometric Style Bohemian Shag Area Rug.png",
+                price: "$63.06"
+            }
+        ]
     }
 ];
