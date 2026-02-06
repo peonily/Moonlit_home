@@ -105,6 +105,64 @@ export const inspirations: Inspiration[] = [
                 price: "$65"
             }
         ]
+    },
+    {
+        id: "bohemian-living-room-2",
+        slug: "organic-bohemian-living-room",
+        categories: ["living-room", "bohemian"],
+        image: "/assets/products/IMG_20260204_151258.jpg",
+        name: "Eclectic Organic Bohemian Living Room Inspiration",
+        description: "Transform your home with this eclectic organic bohemian living room design. Featuring a curated mix of natural rattan textures, Earthy neutral tones, and artisanal decor, this free-spirited aesthetic brings warmth and serenity to any modern living space. Discover the perfect blend of botanical elements and cozy textiles for your next room makeover.",
+        products: [
+            {
+                id: "boho-mirror-starburst",
+                name: "Natural Rattan Starburst Wall Mirror - Artisanal Boho Decor",
+                description: "This handcrafted natural rattan starburst mirror is the quintessential bohemian wall decor. Made from sustainable materials, its intricate woven design adds organic texture and a sunny focal point to your living room or bedroom. A must-have piece for any boho-chic home aesthetic.",
+                link: "https://amzn.to/4bKsTvP",
+                image: "/assets/products/11.png",
+                price: "$45"
+            },
+            {
+                id: "boho-lamp-woven",
+                name: "Woven Grass Ambient Table Lamp - Natural Fiber Lighting",
+                description: "Illuminate your space with this stunning woven grass table lamp. Featuring an organic base crafted from natural fibers and a soft linen shade, this lamp provides warm, ambient lighting that complements bohemian and coastal interiors. Perfect for bedside tables or living room accents.",
+                link: "https://amzn.to/4rA2VzJ",
+                image: "/assets/products/22.png",
+                price: "$120"
+            },
+            {
+                id: "boho-vase-ceramic",
+                name: "Hand-Painted Ceramic Botanical Bud Vase - Boho Chic Pottery",
+                description: "Add a touch of artisanal charm with this hand-painted ceramic botanical bud vase. Featuring a delicate floral motif and organic silhouette, this decorative pottery piece is ideal for displaying dried wildflowers on your mantel, shelf, or coffee table.",
+                link: "https://amzn.to/4qjSEq8",
+                image: "/assets/products/33.png",
+                price: "$32"
+            },
+            {
+                id: "boho-pampas-bundle",
+                name: "Premium Dried Pampas Grass Bundle - Tall Fluffy Plumes",
+                description: "Elevate your interior design with our premium dried pampas grass arrangement. These tall, fluffy natural plumes add height and soft, ethereal texture to any room. Perfect for floor vases, corner decor, or creating a dreamy bohemian atmosphere in your home.",
+                link: "https://amzn.to/4ag5Rul",
+                image: "/assets/products/44.png",
+                price: "$38"
+            },
+            {
+                id: "boho-basket-seagrass",
+                name: "Seagrass Storage Basket with Tassels - Woven Boho Organizer",
+                description: "Stay organized in style with this seagrass storage basket featuring playful tassel details. This hand-woven organizer is perfect for storing throw blankets, pillows, or even as a decorative indoor plant cover. A versatile and eco-friendly addition to your bohemian home furniture.",
+                link: "https://amzn.to/4cbgEIC",
+                image: "/assets/products/55.png",
+                price: "$55"
+            },
+            {
+                id: "boho-pillow-macrame",
+                name: "Textured Macramé Fringed Throw Pillow - Scandi-Boho Accent",
+                description: "Complete your sofa styling with this textured macramé throw pillow. Featuring hand-knotted patterns and delicate fringe, this scandi-boho inspired cushion adds cozy depth and artisanal flair to your seating area. Crafted from soft cotton for ultimate comfort and style.",
+                link: "https://amzn.to/4aciV3K",
+                image: "/assets/products/66.png",
+                price: "$28"
+            }
+        ]
     }
 
 ];

@@ -44,16 +44,18 @@ const InspirationDetail = () => {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50"
+                            className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50 group cursor-pointer"
                         >
-                            <img
-                                src={inspiration.image}
-                                alt={inspiration.name}
-                                className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    e.currentTarget.src = "https://images.unsplash.com/photo-1618220179428-22790b461013?w=1200";
-                                }}
-                            />
+                            <Link to={`/inspiration/${inspiration.slug}`}>
+                                <img
+                                    src={inspiration.image}
+                                    alt={inspiration.name}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    onError={(e) => {
+                                        e.currentTarget.src = "https://images.unsplash.com/photo-1618220179428-22790b461013?w=1200";
+                                    }}
+                                />
+                            </Link>
                         </motion.div>
 
                         {/* Content */}
