@@ -339,5 +339,39 @@ export const inspirations: Inspiration[] = [
                 price: "$103.99"
             }
         ]
+    },
+    {
+        id: "moody-organic-modern-living-room-inspiration",
+        slug: "moody-organic-modern-living-room",
+        categories: ["living-room", "modern"],
+        image: "/assets/products/Moody organic modern living room.jpg",
+        name: "Moody Organic Modern Living Room Inspiration",
+        description: "Transform your space with this sophisticated moody organic modern living room. This design aesthetic blends deep, dramatic tones with natural textures and architectural forms. Discover how to create a luxurious and intimate atmosphere using modern curves, ambient lighting, and high-quality textiles that define contemporary organic comfort.",
+        products: [
+            {
+                id: "modern-pedestal-coffee-table-01",
+                name: "Modern Circle Coffee Table Pedestal Center Table for Apartment",
+                description: "This stunning pedestal coffee table features a sleek circular design that serves as a perfect focal point for modern apartments. Its clean lines and architectural base blend organic form with contemporary style. The solid construction and elegant finish make it a durable and stylish addition to any modern living room decor.",
+                link: "https://amzn.to/4r3rwNB",
+                image: "/assets/products/Modern Circle Coffee Table Pedestal Center Table for Apartment.png",
+                price: "$269.99"
+            },
+            {
+                id: "wall-lamp-plug-in-cord-01",
+                name: "Modern Wall Lamp with Plug in Cord and Dimmable Switch",
+                description: "Elevate your ambient lighting with this modern wall lamp. Featuring a convenient plug-in cord and dimmable switch, it offers adjustable warmth and sophisticated design for any moody living space. Its minimalist profile and high-quality materials ensure it provides both functional lighting and a touch of modern elegance to your walls.",
+                link: "https://amzn.to/4kr6bv2",
+                image: "/assets/products/Wall Lamp with Plug in Cord and Dimmable Switch.png",
+                price: "$36.99"
+            },
+            {
+                id: "modern-couch-sofa-comfy-01",
+                name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests",
+                description: "Experience ultimate comfort and style with this modern sofa. Featuring plush seats, comfy backrests, and sleek armrests, it provides a luxurious seating experience that anchors your organic modern living room. The premium upholstery and ergonomic design make it the perfect choice for both relaxation and entertaining in a contemporary setting.",
+                link: "https://amzn.to/3NYptM0",
+                image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png",
+                price: "$439.99"
+            }
+        ]
     }
 ];
