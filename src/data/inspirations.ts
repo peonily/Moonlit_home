@@ -297,5 +297,47 @@ export const inspirations: Inspiration[] = [
                 price: "$59.99"
             }
         ]
+    },
+    {
+        id: "neutral-monochromatic-living-room-inspiration",
+        slug: "neutral-monochromatic-living-room",
+        categories: ["living-room", "bohemian"],
+        image: "/assets/products/Neutral monochromatic living room.jpg",
+        name: "Neutral Monochromatic Bohemian Living Room",
+        description: "Achieve a serene and sophisticated aesthetic with this neutral monochromatic living room. This Bohemian-inspired space focuses on a harmonious palette of creams and sands, featuring textured furniture and architectural details that create a calm, inviting atmosphere.",
+        products: [
+            {
+                id: "modern-loveseat-sofa-01",
+                name: "Modern Loveseat Sofa for Living Room",
+                description: "This stylish modern loveseat sofa is the perfect centerpiece for a contemporary living room. Featuring clean lines and plush upholstery, it offers both comfort and a sleek aesthetic. Its compact size makes it ideal for smaller spaces without compromising on style.",
+                link: "https://amzn.to/3M9uSPS",
+                image: "/assets/products/Modern Loveseat Sofa for Living Room.png",
+                price: "$331.49"
+            },
+            {
+                id: "rattan-buffet-cabinet-01",
+                name: "Rattan Buffet Cabinet with Storage",
+                description: "Enhance your storage with this elegant Rattan Buffet Cabinet. Combining natural rattan textures with modern design, this piece provides ample storage for your essentials while adding a touch of bohemian charm to your dining or living area.",
+                link: "https://amzn.to/4r9yFfm",
+                image: "/assets/products/Rattan Buffet Cabinet with Storage.png",
+                price: "$185.99"
+            },
+            {
+                id: "circle-wood-coffee-table-01",
+                name: "Circle Wood Coffee Table with Storage Shelf",
+                description: "This versatile circle wood coffee table features a practical storage shelf, making it as functional as it is beautiful. Its round design promotes a natural flow in your living space, while the wooden finish adds warmth and organic texture.",
+                link: "https://amzn.to/4abYuE8",
+                image: "/assets/products/Circle Wood Coffee Table with Storage Shelf.png",
+                price: "$109.99"
+            },
+            {
+                id: "potted-silk-indoor-plant-01",
+                name: "Realistic Potted Silk Artificial Indoor with Green Leaves",
+                description: "Bring the beauty of nature indoors without the maintenance. This realistic potted silk artificial plant features lush green leaves that add a vibrant touch to any room. Perfect for brightening up corners and adding a breath of fresh air to your bohemian decor.",
+                link: "https://amzn.to/4acxILO",
+                image: "/assets/products/Realistic Potted Silk Artificial Indoor with Green Leaves.png",
+                price: "$103.99"
+            }
+        ]
     }
 ];
