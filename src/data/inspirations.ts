@@ -163,6 +163,55 @@ export const inspirations: Inspiration[] = [
                 price: "$28"
             }
         ]
+    },
+    {
+        id: "sunlit-minimalist",
+        slug: "sunlit-minimalist-living-room",
+        categories: ["living-room", "minimalist"],
+        image: "/assets/products/Sunlit Minimalist Living Space.jpg",
+        name: "Sunlit Minimalist Living Space",
+        description: "Experience the essence of tranquility with this sun-drenched minimalist living room. This space harmonizes modern functional furniture with soft, natural textures to create a serene sanctuary focused on clean lines and airy aesthetics.",
+        products: [
+            {
+                id: "sectional-sofa-01",
+                name: "Oversized Modular Sectional Sofa, FSC Certified L Shaped",
+                description: "This premium oversized modular sectional sofa offers ultimate lounging comfort with its deep seating and soft upholstery. FSC certified for sustainable luxury, its L-shaped design perfectly defines a minimalist living space while providing ample room for relaxation.",
+                link: "https://amzn.to/4kiqHO8",
+                image: "/assets/products/Oversized Modular Sectional Sofa, FSC Certified L Shaped.png",
+                price: "$999.99"
+            },
+            {
+                id: "floating-shelves-01",
+                name: "Long Floating Shelves for Wall Set of 4",
+                description: "A set of four long floating shelves that provide elegant storage and display space without the visual bulk of traditional shelving. Perfect for showcasing minimal decor while maintaining clean wall lines in your modern home.",
+                link: "https://amzn.to/4kla5Fz",
+                image: "/assets/products/Long Floating Shelves for Wall Set of 4.png",
+                price: "$41.99"
+            },
+            {
+                id: "full-body-mirror-01",
+                name: "Oversized Full Body Mirrors with Aluminum Frame",
+                description: "Make your living space feel twice as large with this oversized full-body mirror. The sleek aluminum frame offers a modern minimalist touch, while the high-quality glass provides crystal-clear reflection to brighten any room.",
+                link: "https://amzn.to/3Os4z80",
+                image: "/assets/products/Oversized Full Body Mirrors with Aluminum Frame.png",
+                price: "$119.99"
+            },
+            {
+                id: "corner-night-stand-01",
+                name: "3 Color Lights Corner Night Stand",
+                description: "Enhance your mood lighting with this versatile corner stand featuring 3-color light settings. Its compact design fits perfectly in any corner, providing both functional storage and an ambient glow to your minimalist interior.",
+                link: "https://amzn.to/4a1bQUP",
+                image: "/assets/products/3 Color Lights Corner Night Stand.png",
+                price: "$68.99"
+            },
+            {
+                id: "boho-rug-01",
+                name: "Boho Floral Washable Girls Bedroom Rug",
+                description: "Add a touch of soft pattern and warmth with this washable boho floral rug. Its durable, easy-to-clean design makes it as practical as it is beautiful, bringing a gentle natural aesthetic to your living room floor.",
+                link: "https://amzn.to/45UW8s2",
+                image: "/assets/products/Boho Floral Washable Girls Bedroom Rug.png",
+                price: "$64.99"
+            }
+        ]
     }
-
 ];
