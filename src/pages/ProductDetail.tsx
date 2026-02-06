@@ -94,6 +94,11 @@ const ProductDetail = () => {
                                 <span className="text-sm text-muted-foreground">(Featured in {parentInspiration.name})</span>
                             </div>
 
+                            <div className="flex items-center gap-4 mb-8">
+                                <p className="text-3xl font-serif text-primary font-medium">{product.price || "Check Price"}</p>
+                                <span className="text-xs text-muted-foreground uppercase tracking-widest border border-border px-2 py-1 rounded">In Stock</span>
+                            </div>
+
                             <p className="text-lg text-muted-foreground leading-relaxed mb-10 font-light">
                                 {product.description}
                             </p>

@@ -6,10 +6,10 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image - Now Clickable */}
-      <Link to="/inspiration/serene-arched-mirror-living-room" className="absolute inset-0 group cursor-pointer z-0">
+      <Link to="/inspiration/bohemian-serenity-living-room" className="absolute inset-0 group cursor-pointer z-0">
         <img
-          src="/assets/inspirations/living-room-main.jpg"
-          alt="Luxe Minimalist Living Room Inspiration"
+          src="/assets/products/IMG_20260204_170437.jpg"
+          alt="Bohemian Serenity Living Room Inspiration"
           className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
           onError={(e) => {
             e.currentTarget.src = "https://images.unsplash.com/photo-1618220179428-22790b461013?w=1920";
@@ -70,7 +70,7 @@ export function HeroSection() {
             <Link to="/rooms/living-room" className="btn-primary">
               Explore Rooms
             </Link>
-            <Link to="/styles/minimalist" className="btn-outline bg-white/20 backdrop-blur-sm">
+            <Link to="/styles/bohemian" className="btn-outline bg-white/20 backdrop-blur-sm">
               Browse Styles
             </Link>
           </motion.div>
