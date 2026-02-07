@@ -549,5 +549,55 @@ export const inspirations: Inspiration[] = [
                 price: "$64.99"
             }
         ]
+    },
+    {
+        id: "moody-library-room-inspiration",
+        slug: "moody-library-room-inspiration",
+        categories: ["dark-academia", "pieces"],
+        image: "/assets/products/Moody library room inspiration.jpg",
+        name: "Moody Dark Academia Library Inspiration",
+        description: "Immerse yourself in the ultimate dark academia aesthetic with this moody library room. A perfect blend of vintage charm and modern comfort, featuring rich textures, deep tones, and curated furniture pieces that evoke a sense of intellectual mystery and timeless elegance.",
+        products: [
+            {
+                id: "modern-wooden-coffee-table-library",
+                name: "Modern Wooden Coffee Table with Solid Wood Veneer",
+                description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer, offering both durability and a natural aesthetic. Its minimalist design and sturdy construction make it a perfect centerpiece for your modern living room, providing a warm and inviting surface for your daily essentials.",
+                link: "https://amzn.to/4qhoAvn",
+                image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png",
+                price: "$249.99"
+            },
+            {
+                id: "modern-couch-sofa-library",
+                name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests",
+                description: "Experience ultimate comfort and style with this modern sofa. Featuring plush seats, comfy backrests, and sleek armrests, it provides a luxurious seating experience that anchors your organic modern living room. The premium upholstery and ergonomic design make it the perfect choice for both relaxation and entertaining in a contemporary setting.",
+                link: "https://amzn.to/4r2psoM",
+                image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png",
+                price: "$439.99"
+            },
+            {
+                id: "mid-century-sideboard-library",
+                name: "Mid Century Modern Sideboard Buffet Cabinet",
+                description: "Elevate your home storage with this Mid Century Modern Sideboard Buffet Cabinet. Its sleek design and spacious compartments make it a perfect addition to your living room or dining area, blending mid-century style with modern functionality. Crafted with high-quality materials to ensure durability and timeless appeal.",
+                link: "https://amzn.to/3OrDh1B",
+                image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png",
+                price: "$229.90"
+            },
+            {
+                id: "mid-century-accent-chair-library",
+                name: "Mid-Century Accent Chair Modern Retro Leisure Chair",
+                description: "Add a touch of retro charm to your living space with this Mid-Century Accent Chair. Its ergonomic design and plush upholstery provide exceptional comfort, while its sleek lines and tapered wooden legs enhance the modern aesthetic of your room. A perfect leisure chair for reading or relaxing in style.",
+                link: "https://amzn.to/4rV0w2T",
+                image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png",
+                price: "$116.99"
+            },
+            {
+                id: "arched-pantry-cabinet-library",
+                name: "Arched Pantry Cabinet",
+                description: "Add architectural interest and functional storage with this Arched Pantry Cabinet. Featuring a unique arched top and ample shelf space, it's perfect for organizing your kitchen, dining room, or living area. Its elegant design and sturdy construction make it a versatile piece that complements a variety of interior styles.",
+                link: "https://amzn.to/4c9aLM8",
+                image: "/assets/products/Arched Pantry Cabinet.png",
+                price: "$259.99"
+            }
+        ]
     }
 ];
