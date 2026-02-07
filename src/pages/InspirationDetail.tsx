@@ -79,6 +79,26 @@ const InspirationDetail = () => {
                                 {inspiration.description}
                             </p>
 
+                            {inspiration.products.length === 1 && (
+                                <div className="mb-10">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <p className="text-3xl font-serif text-primary font-medium">{inspiration.products[0].price || "Check Price"}</p>
+                                        <span className="text-xs text-muted-foreground uppercase tracking-widest border border-border px-2 py-1 rounded">Curated Selection</span>
+                                    </div>
+                                    <Button
+                                        className="h-16 px-8 rounded-full text-lg font-medium w-full sm:w-auto shadow-lg shadow-primary/20 hover:shadow-xl hover:scale-[1.02] transition-all"
+                                        onClick={() => window.open(inspiration.products[0].link, '_blank')}
+                                    >
+                                        <ShoppingBag className="mr-2 w-5 h-5" />
+                                        Buy Now on Amazon
+                                        <ExternalLink className="ml-2 w-4 h-4 opacity-50" />
+                                    </Button>
+                                    <p className="text-[10px] text-muted-foreground mt-4 uppercase tracking-widest italic">
+                                        * As an Amazon Associate, we earn from qualifying purchases.
+                                    </p>
+                                </div>
+                            )}
+
                             <div className="p-8 bg-muted/30 rounded-3xl border border-border/50">
                                 <div className="flex items-center gap-3 mb-4">
                                     <ShoppingBag className="w-5 h-5 text-primary" />
@@ -91,48 +111,50 @@ const InspirationDetail = () => {
                         </motion.div>
                     </div>
 
-                    {/* Product List */}
-                    <section>
-                        <div className="flex items-center gap-3 mb-12">
-                            <div className="h-px flex-grow bg-border" />
-                            <h2 className="font-serif text-3xl font-medium text-forest px-4 italic">Shop the Look</h2>
-                            <div className="h-px flex-grow bg-border" />
-                        </div>
+                    {/* Product List - Only show if there are multiple products */}
+                    {inspiration.products.length > 1 && (
+                        <section>
+                            <div className="flex items-center gap-3 mb-12">
+                                <div className="h-px flex-grow bg-border" />
+                                <h2 className="font-serif text-3xl font-medium text-forest px-4 italic">Shop the Look</h2>
+                                <div className="h-px flex-grow bg-border" />
+                            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {inspiration.products.map((product, pIndex) => (
-                                <motion.div
-                                    key={product.id}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: pIndex * 0.1 }}
-                                >
-                                    <Link
-                                        to={`/product/${product.id}`}
-                                        className="group block"
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {inspiration.products.map((product, pIndex) => (
+                                    <motion.div
+                                        key={product.id}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5, delay: pIndex * 0.1 }}
                                     >
-                                        <div className="aspect-square rounded-3xl overflow-hidden border border-border/50 mb-4 shadow-sm group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500">
-                                            <img
-                                                src={product.image}
-                                                alt={product.name}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                                onError={(e) => {
-                                                    e.currentTarget.src = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400";
-                                                }}
-                                            />
-                                        </div>
-                                        <h3 className="font-medium text-forest group-hover:text-primary transition-colors text-center line-clamp-1 px-2">
-                                            {product.name}
-                                        </h3>
-                                        <p className="text-[10px] text-center text-muted-foreground uppercase tracking-tighter mt-1 group-hover:text-primary/70 transition-colors">
-                                            View Product Details →
-                                        </p>
-                                    </Link>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </section>
+                                        <Link
+                                            to={`/product/${product.id}`}
+                                            className="group block"
+                                        >
+                                            <div className="aspect-square rounded-3xl overflow-hidden border border-border/50 mb-4 shadow-sm group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500">
+                                                <img
+                                                    src={product.image}
+                                                    alt={product.name}
+                                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                    onError={(e) => {
+                                                        e.currentTarget.src = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400";
+                                                    }}
+                                                />
+                                            </div>
+                                            <h3 className="font-medium text-forest group-hover:text-primary transition-colors text-center line-clamp-1 px-2">
+                                                {product.name}
+                                            </h3>
+                                            <p className="text-[10px] text-center text-muted-foreground uppercase tracking-tighter mt-1 group-hover:text-primary/70 transition-colors">
+                                                View Product Details →
+                                            </p>
+                                        </Link>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
                 </div>
             </main>
             <Footer />

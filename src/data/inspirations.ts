@@ -683,5 +683,23 @@ export const inspirations: Inspiration[] = [
                 price: "$15.99"
             }
         ]
+    },
+    {
+        id: "vintage-makeup-vanity-inspiration",
+        slug: "vintage-makeup-vanity-desk",
+        categories: ["vintage", "pieces"],
+        image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg",
+        name: "Vintage Makeup Vanity Desk with Lighted Mirror",
+        description: "Elegant and functional, this vintage-inspired makeup vanity desk features a large lighted mirror and a built-in power strip. The perfect blend of timeless style and modern convenience, it offers ample storage and perfect illumination for your daily beauty routine. Its clean lines and professional design make it a stunning centerpiece for any bedroom or dressing area.",
+        products: [
+            {
+                id: "vanity-desk-01",
+                name: "Makeup Vanity Desk with Lighted Mirror & Power Strip",
+                description: "This premium makeup vanity desk combines vintage charm with contemporary utility. Featuring an oversized mirror with adjustable LED lighting and an integrated power station for all your styling tools. With multiple spacious drawers and a sturdy construction, it provides the ultimate organized workspace for makeup, skincare, and hair styling. A must-have piece for creating a professional and sophisticated beauty sanctuary at home.",
+                link: "https://amzn.to/3LVGWUR",
+                image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg",
+                price: "$199.99"
+            }
+        ]
     }
 ];
