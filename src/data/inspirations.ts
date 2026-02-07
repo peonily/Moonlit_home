@@ -633,5 +633,55 @@ export const inspirations: Inspiration[] = [
                 price: "$309.99"
             }
         ]
+    },
+    {
+        id: "french-country-cottagecore-pieces",
+        slug: "french-country-cottagecore-decor",
+        categories: ["cottagecore", "pieces"],
+        image: "/assets/products/French country cottagecore decor.jpg",
+        name: "French Country Cottagecore Decor",
+        description: "Discover the perfect blend of provincial elegance and rustic comfort with this French Country Cottagecore decor. This curated collection features timeless vintage pieces, distressed textures, and romantic floral accents that bring the serene beauty of the French countryside into your home. Each element is carefully selected to create a warm, inviting sanctuary that celebrates traditional craftsmanship and cozy, lived-in charm.",
+        products: [
+            {
+                id: "vintage-sofa-fcc",
+                name: "Vintage Sofa with Accent Pillows",
+                description: "Experience the ultimate in traditional luxury with this vintage-inspired cottage sofa. Featuring elegant rolled arms, turned wooden feet, and premium upholstery, this sofa anchors your French country living room with timeless grace. The included accent pillows offer soft texture and layered comfort, perfect for a cozy afternoon reading nook in your provincial retreat.",
+                link: "https://amzn.to/3O1WPJR",
+                image: "/assets/products/Vintage Sofa with Accent Pillows.png",
+                price: "$967.99"
+            },
+            {
+                id: "farmhouse-coffee-table-fcc",
+                name: "Havalance Farmhouse Rectangular Coffee Table",
+                description: "The Havalance rectangular coffee table brings architectural interest to your living space with its masterfully distressed finish and classic farmhouse silhouette. Its spacious tabletop provides ample room for displaying curated cottage decor, while the sturdy construction handles daily life with effortless provincial elegance. A perfect blend of functional utility and rustic sophistication.",
+                link: "https://amzn.to/4cc5Qdg",
+                image: "/assets/products/Havalance Farmhouse Rectangular Coffee Table.png",
+                price: "$429.76"
+            },
+            {
+                id: "distressed-server-fcc",
+                name: "French Country Distressed Dining Room Server",
+                description: "Elevate your storage solutions with this exquisite French Country Distressed Server. Its intricate carved detailing and weathered finish evoke the timeless charm of a Provence estate. Ideal for use in a dining room, entryway, or as a statement piece in your living area, this server provides both generous storage and a beautiful surface for showcasing your favorite heirloom treasures.",
+                link: "https://amzn.to/4qjZfRu",
+                image: "/assets/products/French Country Distressed Dining Room Server.png",
+                price: "$999.99"
+            },
+            {
+                id: "farmhouse-pier-fcc",
+                name: "Farmhouse Pier with 3 Adjustable Shelves",
+                description: "Maximize your vertical display with the Farmhouse Pier. This elegant storage unit features three adjustable shelves, allowing you to showcase books, botanical collections, or vintage porcelain with ease. The classic molding and distressed white finish perfectly complement the cottagecore aesthetic, providing a serene and practical storage solution for any room in your home.",
+                link: "https://amzn.to/4qmv5NA",
+                image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png",
+                price: "$130.48"
+            },
+            {
+                id: "vintage-rose-decor-fcc",
+                name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor",
+                description: "Add a romantic final touch to your walls with this charming Vintage Rose Wall Decor. This 12x16 coquette-inspired art piece features soft botanical illustrations that capture the essence of a blossoming French garden. Its vintage-inspired design and delicate palette bring a breath of fresh air and a touch of floral beauty to your cottagecore or provincial interior design.",
+                link: "https://amzn.to/46CjMcW",
+                image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png",
+                price: "$15.99"
+            }
+        ]
     }
 ];
