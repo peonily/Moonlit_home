@@ -373,5 +373,55 @@ export const inspirations: Inspiration[] = [
                 price: "$439.99"
             }
         ]
+    },
+    {
+        id: "french-country-cottage-decor",
+        slug: "french-country-cottage-decor",
+        categories: ["living-room", "cottagecore"],
+        image: "/assets/products/French Country cottage decor.jpg",
+        name: "French Country Cottagecore Living Room",
+        description: "Transport yourself to the rolling hills of Provence with this enchanting French Country Cottagecore living room. This curated space blends rustic elegance with cozy, lived-in charm, featuring distressed wood finishes, soft floral accents, and timeless vintage-inspired furniture that creates a warm and inviting sanctuary.",
+        products: [
+            {
+                id: "vintage-sofa-accent-pillows",
+                name: "Vintage Sofa with Accent Pillows",
+                description: "This stunning vintage-inspired sofa serves as the perfect centerpiece for any cottagecore or French country living room. Upholstered in premium fabric and featuring elegant rolled arms and turned wooden legs, it offers both exceptional comfort and timeless style. The included accent pillows add a layer of cozy texture and traditional charm to your seating area.",
+                link: "https://amzn.to/3OroRhZ",
+                image: "/assets/products/Vintage Sofa with Accent Pillows.png",
+                price: "$967.99"
+            },
+            {
+                id: "havalance-farmhouse-coffee-table",
+                name: "Havalance Farmhouse Rectangular Coffee Table",
+                description: "The Havalance rectangular coffee table is a masterclass in rustic sophistication. Featuring a weathered white finish and a contrasting dark wood top, this farmhouse piece brings architectural interest and functional surface area to your living space. Its sturdy construction and distressed detailing make it an ideal anchor for cottage-inspired interiors.",
+                link: "https://amzn.to/4qjwrZe",
+                image: "/assets/products/Havalance Farmhouse Rectangular Coffee Table.png",
+                price: "$442.54"
+            },
+            {
+                id: "farmhouse-pier-shelves",
+                name: "Farmhouse Pier with 3 Adjustable Shelves",
+                description: "Maximize your display space with the Farmhouse Pier. This tall, elegant storage unit features three adjustable shelves, perfect for showcasing your favorite vintage finds, books, or botanical accents. The distressed white finish and classic molding details evoke the serene feel of a French countryside home.",
+                link: "https://amzn.to/3ZlCnpL",
+                image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png",
+                price: "$130.48"
+            },
+            {
+                id: "french-country-distressed-server",
+                name: "French Country Distressed Dining Room Server",
+                description: "Elegant and versatile, this French Country Distressed Server adds a touch of traditional luxury to your home. Whether used in the dining room or as a statement side piece in the living area, its intricate carved details and antique finish provide ample storage and a beautiful surface for decor. A true investment piece for lovers of provincial style.",
+                link: "https://amzn.to/4ac4Hjq",
+                image: "/assets/products/French Country Distressed Dining Room Server.png",
+                price: "$1,030.73"
+            },
+            {
+                id: "vintage-rose-wall-decor",
+                name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor",
+                description: "Complete your cottagecore aesthetic with this Vintage Rose Wall Decor. This 12x16 art piece features delicate botanical illustrations that bring a romantic, coquette-inspired flair to your walls. Its soft palette and vintage design make it a charming accent for bedrooms, living rooms, or any space needing a touch of floral beauty.",
+                link: "https://amzn.to/4bFNqBx",
+                image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png",
+                price: "$15.99"
+            }
+        ]
     }
 ];
