@@ -423,5 +423,39 @@ export const inspirations: Inspiration[] = [
                 price: "$15.99"
             }
         ]
+    },
+    {
+        id: "moody-industrial-living-room",
+        slug: "moody-industrial-living-room-inspiration",
+        categories: ["living-room", "modern"],
+        image: "/assets/products/Moody Industrial Living Room Inspo.jpg",
+        name: "Moody Industrial Living Room Inspiration",
+        description: "Elevate your home with this sophisticated moody industrial living room design. This space masterfully blends raw industrial elements like glass-door cabinets with modern comfort and warm, mood-setting lighting. Discover the perfect balance of dark, dramatic tones and functional, stylish furniture for a contemporary urban sanctuary.",
+        products: [
+            {
+                id: "industrial-entertainment-center-01",
+                name: "Modern Entertainment Center with Large Storage Cabinet",
+                description: "This sleek and spacious entertainment center offers a perfect blend of modern design and practical storage. Featuring large cabinets to keep your living room organized, its clean lines and dark finish make it a standout piece in any contemporary or industrial-inspired home.",
+                link: "https://amzn.to/45Q6Rnu",
+                image: "/assets/products/Entertainment Center with Large Storage Cabinet for Living Room.png",
+                price: "$126.99"
+            },
+            {
+                id: "industrial-display-cabinet-01",
+                name: "Display Cabinet with 4 Glass Doors and Internal Lighting",
+                description: "Showcase your favorite decor, books, or collectibles with this elegant display cabinet. Featuring four tempered glass doors and built-in lighting, this cabinet adds a touch of luxury and architectural interest to your living space while providing ample storage and visibility.",
+                link: "https://amzn.to/3ZlGjqx",
+                image: "/assets/products/Display Cabinet with 4 Glass Doors and Lights.png",
+                price: "$299.99"
+            },
+            {
+                id: "industrial-floor-lamp-01",
+                name: "Modern Minimalist Floor Lamp with Beige Fabric Shade",
+                description: "Add soft, ambient warmth to your room with this simple yet sophisticated floor lamp. Its minimalist design and neutral beige shade complement both modern and industrial decors, providing a cozy glow that enhances any moody living room atmosphere.",
+                link: "https://amzn.to/4r2qph7",
+                image: "/assets/products/Modern Floor Lamp Simple Design with Beige Shade, Floor Lamps for Living Room.png",
+                price: "$49.99"
+            }
+        ]
     }
 ];
