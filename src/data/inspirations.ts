@@ -599,5 +599,39 @@ export const inspirations: Inspiration[] = [
                 price: "$259.99"
             }
         ]
+    },
+    {
+        id: "dark-academia-room-decor-inspo",
+        slug: "dark-academia-room-decor",
+        categories: ["dark-academia", "pieces"],
+        image: "/assets/products/Dark Academia room decor.jpg",
+        name: "Dark Academia Room Decor Inspiration",
+        description: "Immerse yourself in the intellectual and mysterious charm of Dark Academia. This curated room features moody wooden textures, classic mid-century silhouettes, and sophisticated display solutions, creating an atmosphere perfect for deep study and vintage-inspired living.",
+        products: [
+            {
+                id: "modern-wooden-coffee-table-da-2",
+                name: "Modern Wooden Coffee Table with Solid Wood Veneer",
+                description: "Elevate your living space with this sophisticated modern wooden coffee table. Featuring a high-quality solid wood veneer and a minimalist silhouette, it perfectly captures the organic warmth and intellectual aesthetic of Dark Academia. Its sturdy construction ensures a durable and inviting centerpiece for your home library or study.",
+                link: "https://amzn.to/4qWqDpO",
+                image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png",
+                price: "$249.99"
+            },
+            {
+                id: "mid-century-sideboard-da-2",
+                name: "Mid Century Modern Sideboard Buffet Cabinet",
+                description: "This Mid Century Modern Sideboard Buffet Cabinet blends timeless design with practical storage. Its elegant dark wood finish and spacious compartments provide the perfect home for your vintage book collection or academic archives. A versatile piece that adds a touch of mid-century sophistication to any dark academia-inspired interior.",
+                link: "https://amzn.to/4r4q25D",
+                image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png",
+                price: "$229.90"
+            },
+            {
+                id: "display-cabinet-da-2",
+                name: "Display Cabinet with 4 Glass Doors and Lights",
+                description: "Showcase your most treasured curiosities and scholarly finds with this stunning four-door display cabinet. Integrated lighting highlights your collection through tempered glass doors, while the moody industrial-inspired frame provides a dramatic backdrop. An essential piece for creating a curated and scholarly atmosphere in your space.",
+                link: "https://amzn.to/4afvDyK",
+                image: "/assets/products/Display Cabinet with 4 Glass Doors and Lights.png",
+                price: "$309.99"
+            }
+        ]
     }
 ];
