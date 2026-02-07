@@ -457,5 +457,47 @@ export const inspirations: Inspiration[] = [
                 price: "$49.99"
             }
         ]
+    },
+    {
+        id: "minimalist-neutral-living-room-inspiration",
+        slug: "minimalist-neutral-living-room-inspiration",
+        categories: ["living-room", "minimalist"],
+        image: "/assets/products/Minimalist neutral interior design.jpg",
+        name: "Minimalist Neutral Living Room Inspiration",
+        description: "Embrace the beauty of simplicity with this minimalist neutral living room. Featuring clean lines, organic textures, and a harmonious color palette, this space creates a calming sanctuary for modern living. Discover the perfect balance of functional design and serene aesthetics to transform your home into a peaceful retreat.",
+        products: [
+            {
+                id: "mid-century-sideboard-01",
+                name: "Mid Century Modern Sideboard Buffet Cabinet",
+                description: "Elevate your home storage with this Mid Century Modern Sideboard Buffet Cabinet. Its sleek design and spacious compartments make it a perfect addition to your living room or dining area, blending mid-century style with modern functionality. Crafted with high-quality materials to ensure durability and timeless appeal.",
+                link: "https://amzn.to/3MfEhp1",
+                image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png",
+                price: "$229.90"
+            },
+            {
+                id: "valleys-landscape-art-01",
+                name: "Valleys Landscape Wilderness Impressionism Traditional Wall Art",
+                description: "Bring the serene beauty of the wilderness into your living room with this Valleys Landscape Wilderness Impressionism traditional wall art. Its rich colors and expressive brushstrokes add a touch of timeless elegance and natural calm to any wall. Ideal for creating a focal point in a minimalist or traditional home.",
+                link: "https://amzn.to/4klZ6vD",
+                image: "/assets/products/Valleys Landscape Wilderness Impressionism Traditional for Living Room.png",
+                price: "$72.59"
+            },
+            {
+                id: "modern-wooden-coffee-table-01",
+                name: "Modern Wooden Coffee Table with Solid Wood Veneer",
+                description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer, offering both durability and a natural aesthetic. Its minimalist design and sturdy construction make it a perfect centerpiece for your modern living room, providing a warm and inviting surface for your daily essentials.",
+                link: "https://amzn.to/4qoL51w",
+                image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png",
+                price: "$249.99"
+            },
+            {
+                id: "mid-century-accent-chair-01",
+                name: "Mid-Century Accent Chair Modern Retro Leisure Chair",
+                description: "Add a touch of retro charm to your living space with this Mid-Century Accent Chair. Its ergonomic design and plush upholstery provide exceptional comfort, while its sleek lines and tapered wooden legs enhance the modern aesthetic of your room. A perfect leisure chair for reading or relaxing in style.",
+                link: "https://amzn.to/4ah123E",
+                image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png",
+                price: "$125.98"
+            }
+        ]
     }
 ];
