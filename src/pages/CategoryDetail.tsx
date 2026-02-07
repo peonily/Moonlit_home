@@ -20,11 +20,20 @@ const categoryData = {
         "bohemian": { name: "Bohemian", desc: "Free-spirited, global-inspired decor with rich textures." },
         "modern-classic": { name: "Modern Classic", desc: "Timeless sophistication meets contemporary comfort." },
         "minimalist": { name: "Minimalist", desc: "Finding beauty in simplicity and intentional space." },
-        "country": { name: "Country", desc: "Rustic charm and pastoral elegance for a warm, lived-in feel." }
+        "country": { name: "Country", desc: "Rustic charm and pastoral elegance for a warm, lived-in feel." },
+        "dark-academia": { name: "Dark Academia", desc: "Intellectual, mysterious aesthetic with deep tones and classic textures." },
+        "industrial": { name: "Industrial", desc: "Raw materials, exposed structures, and a balance of old and new." },
+        "classic": { name: "Classic", desc: "Timeless designs that offer enduring style and graceful comfort." },
+        "vintage": { name: "Vintage", desc: "Curated pieces from the past that bring character and history to your home." }
+    },
+    collections: {
+        "pieces": { name: "Designer Pieces", desc: "Individual decor items selected to elevate your interior design." },
+        "build-your-room": { name: "Build Your Room", desc: "Complete concepts and coordinated pieces for a full room transformation." },
+        "amazon-finds": { name: "Amazon Finds", desc: "The best home decor treasures discovered on Amazon." }
     }
 };
 
-const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' }) => {
+const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' | 'collections' }) => {
     const { id = "" } = useParams<{ id: string }>();
     // @ts-ignore
     const data = categoryData[type][id] || { name: "Collection", desc: "Explore our curated inspirations." };
@@ -43,7 +52,7 @@ const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' }) => {
                         className="text-center mb-16 pt-10"
                     >
                         <p className="text-sm font-medium tracking-[0.3em] uppercase text-primary mb-4">
-                            {type === 'rooms' ? 'Design by Room' : 'Design by Style'}
+                            {type === 'rooms' ? 'Design by Room' : type === 'styles' ? 'Design by Style' : 'Curated Collection'}
                         </p>
                         <h1 className="text-4xl md:text-5xl font-serif font-medium text-forest mb-4">
                             {data.name}

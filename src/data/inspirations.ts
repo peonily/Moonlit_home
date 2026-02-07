@@ -499,5 +499,55 @@ export const inspirations: Inspiration[] = [
                 price: "$125.98"
             }
         ]
+    },
+    {
+        id: "dark-academia-living-room-idea",
+        slug: "dark-academia-living-room-idea",
+        categories: ["dark-academia", "pieces"],
+        image: "/assets/products/Dark Academia living room idea.jpg",
+        name: "Dark Academia Living Room Inspiration",
+        description: "Step into a world of intellectual mystery with this Dark Academia living room. Featuring a curated selection of moody, classic pieces, this space blends the warmth of natural wood with the sophistication of traditional art and modern comfort. Every element is chosen to create an atmosphere of timeless elegance and academic charm, perfect for deep thought and creative pursuits.",
+        products: [
+            {
+                id: "dark-academia-coffee-table",
+                name: "Modern Wooden Coffee Table with Solid Wood Veneer",
+                description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer, offering both durability and a natural aesthetic. Its minimalist design and sturdy construction make it a perfect centerpiece for your modern living room, providing a warm and inviting surface for your daily essentials.",
+                link: "https://amzn.to/4aiyIOz",
+                image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png",
+                price: "$249.99"
+            },
+            {
+                id: "dark-academia-wall-art",
+                name: "Valleys Landscape Wilderness Impressionism Traditional Wall Art",
+                description: "Bring the serene beauty of the wilderness into your living room with this Valleys Landscape Wilderness Impressionism traditional wall art. Its rich colors and expressive brushstrokes add a touch of timeless elegance and natural calm to any wall. Ideal for creating a focal point in a minimalist or traditional home.",
+                link: "https://amzn.to/4qpTdyW",
+                image: "/assets/products/Valleys Landscape Wilderness Impressionism Traditional for Living Room.png",
+                price: "$169.99"
+            },
+            {
+                id: "dark-academia-sofa",
+                name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests",
+                description: "Experience ultimate comfort and style with this modern sofa. Featuring plush seats, comfy backrests, and sleek armrests, it provides a luxurious seating experience that anchors your organic modern living room. The premium upholstery and ergonomic design make it the perfect choice for both relaxation and entertaining in a contemporary setting.",
+                link: "https://amzn.to/4bFXoTt",
+                image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png",
+                price: "$439.99"
+            },
+            {
+                id: "dark-academia-chair",
+                name: "Mid-Century Accent Chair Modern Retro Leisure Chair",
+                description: "Add a touch of retro charm to your living space with this Mid-Century Accent Chair. Its ergonomic design and plush upholstery provide exceptional comfort, while its sleek lines and tapered wooden legs enhance the modern aesthetic of your room. A perfect leisure chair for reading or relaxing in style.",
+                link: "https://amzn.to/3M9MHhK",
+                image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png",
+                price: "$135.99"
+            },
+            {
+                id: "dark-academia-floor-lamp",
+                name: "Modern Floor Lamp Simple Design with Beige Shade",
+                description: "Add soft, ambient warmth to your room with this simple yet sophisticated floor lamp. Its minimalist design and neutral beige shade complement both modern and industrial decors, providing a cozy glow that enhances any moody living room atmosphere.",
+                link: "https://amzn.to/3Odagqp",
+                image: "/assets/products/Modern Floor Lamp Simple Design with Beige Shade, Floor Lamps for Living Room.png",
+                price: "$64.99"
+            }
+        ]
     }
 ];
