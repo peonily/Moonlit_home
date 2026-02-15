@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { inspirations } from "@/data/inspirations";
 import { ArrowLeft, ExternalLink, ShoppingCart, ShieldCheck, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const ProductDetail = () => {
     const { id } = useParams<{ id: string }>();
@@ -35,6 +36,13 @@ const ProductDetail = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEO
+                title={product.name}
+                description={product.description}
+                image={product.image}
+                type="product"
+                price={product.price}
+            />
             <Header />
             <main className="pt-24 pb-20">
                 <div className="container mx-auto px-6">

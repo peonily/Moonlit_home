@@ -5,9 +5,14 @@ import { StyleSection } from "@/components/StyleSection";
 import { CollectionsSection } from "@/components/CollectionsSection";
 import { Footer } from "@/components/Footer";
 
+import { SEO } from "@/components/SEO";
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        description="Discover curated interior design inspiration with Moonlit Home Decor. Explore cottagecore, modern, bohemian and more aesthetics for your dream home."
+      />
       <Header />
       <main>
         <HeroSection />

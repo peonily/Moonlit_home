@@ -6,6 +6,7 @@ import { inspirations } from "@/data/inspirations";
 import { ShoppingBag, ArrowLeft, ExternalLink } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const InspirationDetail = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -24,6 +25,12 @@ const InspirationDetail = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEO
+                title={inspiration.name}
+                description={inspiration.description}
+                image={inspiration.image}
+                type="article"
+            />
             <Header />
             <main className="pt-24 pb-20">
                 <div className="container mx-auto px-6">

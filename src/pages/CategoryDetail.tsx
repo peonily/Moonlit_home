@@ -33,6 +33,8 @@ const categoryData = {
     }
 };
 
+import { SEO } from "@/components/SEO";
+
 const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' | 'collections' }) => {
     const { id = "" } = useParams<{ id: string }>();
     // @ts-ignore
@@ -42,6 +44,11 @@ const CategoryDetail = ({ type }: { type: 'rooms' | 'styles' | 'collections' }) 
 
     return (
         <div className="min-h-screen bg-background">
+            <SEO
+                title={data.name}
+                description={data.desc}
+                type="website"
+            />
             <Header />
             <main className="pt-24 pb-20">
                 <section className="container mx-auto px-6">
