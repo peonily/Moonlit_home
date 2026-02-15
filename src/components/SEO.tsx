@@ -59,7 +59,8 @@ export const SEO = ({
                         "url": canonicalUrl,
                         "priceCurrency": currency,
                         "price": numericPrice || "0",
-                        "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+                        "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+                        "itemCondition": "https://schema.org/NewCondition"
                     }
                 };
             case "article":
@@ -114,17 +115,25 @@ export const SEO = ({
             {description && <meta property="og:description" content={description} />}
             {fullImageUrl && <meta property="og:image" content={fullImageUrl} />}
             <meta property="og:url" content={canonicalUrl} />
-            <meta property="og:type" content={type === "product" ? "product" : type} />
 
-            {/* Pinterest Product Meta Tags */}
-            {type === "product" && (
+            {/* Pinterest Product Specifics */}
+            {type === "product" ? (
                 <>
-                    {numericPrice && <meta property="product:price:amount" content={numericPrice} />}
+                    <meta property="og:type" content="og:product" />
+                    <meta property="product:price:amount" content={numericPrice || "0"} />
                     <meta property="product:price:currency" content={currency} />
                     <meta property="product:availability" content={availability} />
                     <meta property="og:availability" content={availability} />
+
+                    {/* Shoppable Pin specific tags */}
+                    <meta property="og:price:amount" content={numericPrice || "0"} />
+                    <meta property="og:price:currency" content={currency} />
                     <meta property="product:brand" content={siteName} />
+                    <meta property="product:condition" content="new" />
+                    <meta property="product:retailer_item_id" content={title?.toLowerCase().replace(/\s+/g, '-') || "product-id"} />
                 </>
+            ) : (
+                <meta property="og:type" content={type} />
             )}
 
             {/* Twitter Card Tags */}
