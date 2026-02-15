@@ -34,25 +34,66 @@ export const SEO = ({
 
     const numericPrice = cleanPrice(price);
 
-    // Schema.org JSON-LD for Product
-    const jsonLd = type === "product" ? {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": title,
-        "image": image,
-        "description": description,
-        "brand": {
-            "@type": "Brand",
-            "name": siteName
-        },
-        "offers": {
-            "@type": "Offer",
-            "url": canonicalUrl,
-            "priceCurrency": currency,
-            "price": numericPrice,
-            "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+    // Schema.org JSON-LD
+    const getJsonLd = () => {
+        switch (type) {
+            case "product":
+                return {
+                    "@context": "https://schema.org/",
+                    "@type": "Product",
+                    "name": title || siteName,
+                    "image": image,
+                    "description": description,
+                    "brand": {
+                        "@type": "Brand",
+                        "name": siteName
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "url": canonicalUrl,
+                        "priceCurrency": currency,
+                        "price": numericPrice || "0",
+                        "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+                    }
+                };
+            case "article":
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": title || siteName,
+                    "image": [image],
+                    "description": description,
+                    "author": {
+                        "@type": "Organization",
+                        "name": siteName,
+                        "url": window.location.origin
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": siteName,
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": `${window.location.origin}/logo.png` // Fallback to a logo if exists
+                        }
+                    },
+                    "datePublished": "2024-01-01T00:00:00+00:00", // Default or you could pass this as a prop
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": canonicalUrl
+                    }
+                };
+            default:
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "WebSite",
+                    "name": siteName,
+                    "url": window.location.origin,
+                    "description": description
+                };
         }
-    } : null;
+    };
+
+    const jsonLd = getJsonLd();
 
     return (
         <Helmet>
@@ -67,7 +108,7 @@ export const SEO = ({
             {description && <meta property="og:description" content={description} />}
             {image && <meta property="og:image" content={image} />}
             <meta property="og:url" content={canonicalUrl} />
-            <meta property="og:type" content={type} />
+            <meta property="og:type" content={type === "product" ? "og:product" : type} />
 
             {/* Pinterest Rich Pin Product Tags */}
             {type === "product" && (
@@ -85,11 +126,9 @@ export const SEO = ({
             {image && <meta name="twitter:image" content={image} />}
 
             {/* JSON-LD */}
-            {jsonLd && (
-                <script type="application/ld+json">
-                    {JSON.stringify(jsonLd)}
-                </script>
-            )}
+            <script type="application/ld+json">
+                {JSON.stringify(jsonLd)}
+            </script>
         </Helmet>
     );
 };
