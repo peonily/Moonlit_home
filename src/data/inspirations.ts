@@ -701,5 +701,23 @@ export const inspirations: Inspiration[] = [
                 price: "$199.99"
             }
         ]
+    },
+    {
+        id: "nolita-leather-sofa-inspiration",
+        slug: "nolita-leather-sofa",
+        categories: ["modern", "pieces"],
+        image: "https://www.polyandbark.com/cdn/shop/files/LR-681-TAN-NolitaSofainCognacTan-Lifestyle1-2890x1500px_1500x.jpg",
+        name: "POLY & BARK Nolita Leather Sofa",
+        description: "Experience the perfect blend of modern sophistication and timeless comfort with the Nolita Leather Sofa. Featuring full-grain pure-aniline Italian leather that develops a beautiful vintage patina over time, this sofa is anchored by a solid wood base and designed for luxurious lounging. Its sleek lines and rich cognac tan hue make it the ultimate centerpiece for any contemporary living space.",
+        products: [
+            {
+                id: "nolita-leather-sofa-01",
+                name: "POLY & BARK Nolita 85\" Leather Sofa",
+                description: "This premium 85-inch sofa is crafted from top-tier Italian leather and features feather-down comfort toppers for a sink-in feel. The solid wood base in a honey finish perfectly complements the cognac hide, while the kiln-dried hardwood frame ensures lasting durability and support.",
+                link: "https://amzn.to/3MzAx1B",
+                image: "https://www.polyandbark.com/cdn/shop/products/LR-681-TAN_2_ae214d9f-0b3a-496d-beda-ddc3ac0c7a3d_1500x.jpg",
+                price: "$1,949"
+            }
+        ]
     }
 ];

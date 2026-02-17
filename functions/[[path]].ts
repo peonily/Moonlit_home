@@ -69,6 +69,7 @@ const products: Record<string, { name: string; description: string; image: strin
     "farmhouse-pier-fcc": { name: "Farmhouse Pier with 3 Adjustable Shelves", description: "Maximize your vertical display with the Farmhouse Pier.", image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png", price: "$130.48" },
     "vintage-rose-decor-fcc": { name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor", description: "Add a romantic final touch to your walls with this charming Vintage Rose Wall Decor.", image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png", price: "$15.99" },
     "vanity-desk-01": { name: "Makeup Vanity Desk with Lighted Mirror & Power Strip", description: "This premium makeup vanity desk combines vintage charm with contemporary utility.", image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg", price: "$199.99" },
+    "nolita-leather-sofa-01": { name: "POLY & BARK Nolita 85\" Leather Sofa", description: "This premium 85-inch sofa is crafted from top-tier Italian leather and features feather-down comfort toppers.", image: "https://www.polyandbark.com/cdn/shop/products/LR-681-TAN_2_ae214d9f-0b3a-496d-beda-ddc3ac0c7a3d_1500x.jpg", price: "$1,949" },
 };
 
 const inspirations: Record<string, { name: string; description: string; image: string }> = {
@@ -88,6 +89,7 @@ const inspirations: Record<string, { name: string; description: string; image: s
     "dark-academia-room-decor": { name: "Dark Academia Room Decor Inspiration", description: "Immerse yourself in the intellectual and mysterious charm of Dark Academia.", image: "/assets/products/Dark Academia room decor.jpg" },
     "french-country-cottagecore-decor": { name: "French Country Cottagecore Decor", description: "Discover the perfect blend of provincial elegance and rustic comfort.", image: "/assets/products/French country cottagecore decor.jpg" },
     "vintage-makeup-vanity-desk": { name: "Vintage Makeup Vanity Desk with Lighted Mirror", description: "Elegant and functional, this vintage-inspired makeup vanity desk features a large lighted mirror.", image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg" },
+    "nolita-leather-sofa": { name: "POLY & BARK Nolita Leather Sofa", description: "Experience the perfect blend of modern sophistication and timeless comfort with the Nolita Leather Sofa.", image: "https://www.polyandbark.com/cdn/shop/files/LR-681-TAN-NolitaSofainCognacTan-Lifestyle1-2890x1500px_1500x.jpg" },
 };
 
 function cleanPrice(price?: string): string {
@@ -104,7 +106,7 @@ function buildProductMetaTags(productId: string): string | null {
     if (!product) return null;
 
     const fullTitle = `${product.name} | ${SITE_NAME}`;
-    const imageUrl = `${SITE_URL}${product.image}`;
+    const imageUrl = product.image.startsWith('http') ? product.image : `${SITE_URL}${product.image}`;
     const pageUrl = `${SITE_URL}/product/${productId}`;
     const numericPrice = cleanPrice(product.price);
 
@@ -155,7 +157,7 @@ function buildInspirationMetaTags(slug: string): string | null {
     if (!inspiration) return null;
 
     const fullTitle = `${inspiration.name} | ${SITE_NAME}`;
-    const imageUrl = `${SITE_URL}${inspiration.image}`;
+    const imageUrl = inspiration.image.startsWith('http') ? inspiration.image : `${SITE_URL}${inspiration.image}`;
     const pageUrl = `${SITE_URL}/inspiration/${slug}`;
 
     const jsonLd = JSON.stringify({
