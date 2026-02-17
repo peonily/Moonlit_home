@@ -719,5 +719,23 @@ export const inspirations: Inspiration[] = [
                 price: "$1,949"
             }
         ]
+    },
+    {
+        id: "livelyglow-vanity-inspiration",
+        slug: "livelyglow-makeup-vanity-desk",
+        categories: ["modern", "pieces"],
+        image: "https://m.media-amazon.com/images/P/B0GG9C164R.01._SCLZZZZZZZ_SX1500_.jpg",
+        name: "LIVELYGLOW Makeup Vanity Desk Set with Lighted Mirror",
+        description: "Elevate your beauty routine with this sleek and functional makeup vanity desk. Featuring a large smart LED mirror with adjustable lighting, a built-in power outlet, and a dedicated hairdryer rack, it offers a professional-grade setup for your bedroom. The set includes a matching cushioned stool and four spacious drawers for organized storage of your cosmetics and styling tools.",
+        products: [
+            {
+                id: "livelyglow-vanity-01",
+                name: "LIVELYGLOW Makeup Vanity Desk with Lighted Mirror & Power Outlet",
+                description: "This comprehensive vanity set combines modern aesthetics with practical utility. The integrated power station and USB ports keep your devices charged, while the three lighting modes (warm, natural, cool) ensure you have the perfect glow for every occasion. Crafted from durable materials, it's a stylish and efficient workspace for all your beauty needs.",
+                link: "https://amzn.to/40cHWXR",
+                image: "https://m.media-amazon.com/images/P/B0GG9C164R.01._SCLZZZZZZZ_SX1500_.jpg",
+                price: "$109.99"
+            }
+        ]
     }
 ];
