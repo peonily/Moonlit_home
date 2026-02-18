@@ -1,4 +1,5 @@
 import { inspirations } from "../../src/data/inspirations";
+import { PIN_PRICE_MAP } from "./pinPriceMap";
 
 const SITE_URL = "https://moonlit-home-decor.com";
 const SITE_NAME = "Moonlit Home Decor";
@@ -54,8 +55,10 @@ function toAbsoluteImageUrl(image: string): string {
 function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     const fullTitle = `${product.name} | ${SITE_NAME}`;
     const imageUrl = toAbsoluteImageUrl(product.image);
-    const numericPrice = cleanPrice(product.pinPrice || product.price);
-    const priceCurrency = product.pinCurrency || "USD";
+    const mappedPrice = PIN_PRICE_MAP[product.id]?.amount;
+    const mappedCurrency = PIN_PRICE_MAP[product.id]?.currency;
+    const numericPrice = cleanPrice(mappedPrice || product.pinPrice || product.price);
+    const priceCurrency = mappedCurrency || product.pinCurrency || "USD";
     const hasNumericPrice = numericPrice.length > 0;
 
     const productJsonLd: {
