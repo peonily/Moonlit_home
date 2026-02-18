@@ -8,14 +8,14 @@ const wishlistItems = [
     {
         id: 1,
         name: "Vintage Brass Candlestick",
-        price: "$24.00",
+        price: "Check the Price on Amazon",
         image: "https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&q=80&w=400",
         category: "Decor"
     },
     {
         id: 2,
         name: "Linen Floral Throw Pillow",
-        price: "$38.00",
+        price: "Check the Price on Amazon",
         image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?auto=format&fit=crop&q=80&w=400",
         category: "Textiles"
     }

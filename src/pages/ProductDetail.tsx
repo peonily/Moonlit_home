@@ -103,7 +103,7 @@ const ProductDetail = () => {
                             </div>
 
                             <div className="flex items-center gap-4 mb-8">
-                                <p className="text-3xl font-serif text-primary font-medium">{product.price || "Check Price"}</p>
+                                <p className="text-3xl font-serif text-primary font-medium">{product.price || "Check the Price on Amazon"}</p>
                                 <span className="text-xs text-muted-foreground uppercase tracking-widest border border-border px-2 py-1 rounded">In Stock</span>
                             </div>
 

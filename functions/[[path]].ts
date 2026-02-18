@@ -7,70 +7,70 @@ const products: Record<string, { name: string; description: string; image: strin
     "sofa-01": { name: "Floating Picture Ledge Shelves for Wall Set of 4, 24 Inch Wall", description: "Experience ultimate comfort with this modular L-shaped sectional.", image: "/assets/products/2.png" },
     "table-01": { name: "Plank+Beam Solid Oak Coffee Table", description: "A solid oak coffee table with a rustic blonde wirebrush finish.", image: "/assets/products/3.png" },
     "shelves-01": { name: "Vintage Living Room Area Rug 5x8", description: "Set of 4 floating shelves designed with a safety lip.", image: "/assets/products/Screenshot_30.png" },
-    "boho-sectional-01": { name: "Cream Comfort L-Shaped Sectional", description: "This plush cream sectional sofa offers the perfect balance of modern design and cozy comfort.", image: "/assets/products/A1.png", price: "$1,299" },
-    "boho-pouf-01": { name: "Natural Jute Hand-Woven Pouf", description: "Add organic texture and extra seating with this hand-woven jute pouf.", image: "/assets/products/A2.png", price: "$85" },
-    "boho-coffee-table-01": { name: "Round Oak Finish Coffee Table", description: "A minimalist round coffee table with an oak finish that adds warmth.", image: "/assets/products/A3.png", price: "$245" },
-    "boho-sideboard-01": { name: "Natural Wood Grain Sideboard", description: "This elegant sideboard features a beautiful natural wood grain and ample storage.", image: "/assets/products/A4.png", price: "$420" },
-    "boho-wall-art-01": { name: "Tranquil Botanical Wall Art Set", description: "A set of three abstract botanical art pieces that capture the essence of nature.", image: "/assets/products/A5.png", price: "$65" },
-    "boho-mirror-starburst": { name: "Natural Rattan Starburst Wall Mirror - Artisanal Boho Decor", description: "This handcrafted natural rattan starburst mirror is the quintessential bohemian wall decor.", image: "/assets/products/11.png", price: "$45" },
-    "boho-lamp-woven": { name: "Woven Grass Ambient Table Lamp - Natural Fiber Lighting", description: "Illuminate your space with this stunning woven grass table lamp.", image: "/assets/products/22.png", price: "$120" },
-    "boho-vase-ceramic": { name: "Hand-Painted Ceramic Botanical Bud Vase - Boho Chic Pottery", description: "Add a touch of artisanal charm with this hand-painted ceramic botanical bud vase.", image: "/assets/products/33.png", price: "$32" },
-    "boho-pampas-bundle": { name: "Premium Dried Pampas Grass Bundle - Tall Fluffy Plumes", description: "Elevate your interior design with our premium dried pampas grass arrangement.", image: "/assets/products/44.png", price: "$38" },
-    "boho-basket-seagrass": { name: "Seagrass Storage Basket with Tassels - Woven Boho Organizer", description: "Stay organized in style with this seagrass storage basket.", image: "/assets/products/55.png", price: "$55" },
-    "boho-pillow-macrame": { name: "Textured Macramé Fringed Throw Pillow - Scandi-Boho Accent", description: "Complete your sofa styling with this textured macramé throw pillow.", image: "/assets/products/66.png", price: "$28" },
-    "sectional-sofa-01": { name: "Oversized Modular Sectional Sofa, FSC Certified L Shaped", description: "This premium oversized modular sectional sofa offers ultimate lounging comfort.", image: "/assets/products/Oversized Modular Sectional Sofa, FSC Certified L Shaped.png", price: "$999.99" },
-    "floating-shelves-01": { name: "Long Floating Shelves for Wall Set of 4", description: "A set of four long floating shelves that provide elegant storage and display space.", image: "/assets/products/Long Floating Shelves for Wall Set of 4.png", price: "$41.99" },
-    "full-body-mirror-01": { name: "Oversized Full Body Mirrors with Aluminum Frame", description: "Make your living space feel twice as large with this oversized full-body mirror.", image: "/assets/products/Oversized Full Body Mirrors with Aluminum Frame.png", price: "$119.99" },
-    "corner-night-stand-01": { name: "3 Color Lights Corner Night Stand", description: "Enhance your mood lighting with this versatile corner stand.", image: "/assets/products/3 Color Lights Corner Night Stand.png", price: "$68.99" },
-    "boho-rug-01": { name: "Boho Floral Washable Girls Bedroom Rug", description: "Add a touch of soft pattern and warmth with this washable boho floral rug.", image: "/assets/products/Boho Floral Washable Girls Bedroom Rug.png", price: "$64.99" },
-    "velvet-sofa-rose": { name: "Valour Performance Velvet Sofa, Dusty Rose", description: "This elegant dusty rose velvet sofa combines mid-century modern design with luxurious comfort.", image: "/assets/products/Valour Performance Velvet Sofa, Dusty Rose.png", price: "$451.78" },
-    "ornate-gold-mirror": { name: "Ornate Baroque Vintage Gold Mirror", description: "Add a touch of historic grandeur to your home with this Ornate Baroque Vintage Gold Mirror.", image: "/assets/products/Ornate Baroque Vintage Gold Mirror.png", price: "$118.73" },
-    "wooden-center-table": { name: "Wooden Center Table with Storage, Rectangle Living Room Table", description: "This functional yet stylish wooden center table brings natural warmth to your living space.", image: "/assets/products/Wooden Center Table with Storage, Rectangle Living Room Table.png", price: "$129.99" },
-    "bohemian-shag-rug": { name: "Flash Furniture Roxy Geometric Style Bohemian Shag Area Rug", description: "Transform your floor with the Roxy Geometric Bohemian Shag Rug.", image: "/assets/products/Flash Furniture Roxy Geometric Style Bohemian Shag Area Rug.png", price: "$63.06" },
-    "modular-memory-foam-couch-01": { name: "Modular Memory Foam Couches for Living Room", description: "Experience cloud-like comfort with this modular memory foam sectional.", image: "/assets/products/Modular Memory Foam Couches for Living Room.png", price: "$563.03" },
-    "jute-pouf-ottoman-01": { name: "Jute Circular Jute Pouf Ottoman - Braided Pouffe Accent Sitting", description: "Hand-braided from natural fiber, this circular jute pouf adds organic texture.", image: "/assets/products/Jute Circular Jute Pouf Ottoman - Braided Pouffe Accent Sitting.png", price: "$72.99" },
-    "triple-wide-bookshelf-01": { name: "Bookshelf Triple Wide Wood Bookcase Storage with Adjustable Shelves", description: "An elegant and spacious storage solution, this triple-wide wood bookcase.", image: "/assets/products/Bookshelf Triple Wide Wood Bookcase Storage with Adjustable Shelves.png", price: "$649.99" },
-    "round-end-table-01": { name: "Round End Table with 3 Storage Shelves for Living Room", description: "Keep your essentials within reach with this stylish round end table.", image: "/assets/products/Round End Table with 3 Storage Shelves for Living Room.png", price: "$59.99" },
-    "modern-loveseat-sofa-01": { name: "Modern Loveseat Sofa for Living Room", description: "This stylish modern loveseat sofa is the perfect centerpiece for a contemporary living room.", image: "/assets/products/Modern Loveseat Sofa for Living Room.png", price: "$331.49" },
-    "rattan-buffet-cabinet-01": { name: "Rattan Buffet Cabinet with Storage", description: "Enhance your storage with this elegant Rattan Buffet Cabinet.", image: "/assets/products/Rattan Buffet Cabinet with Storage.png", price: "$185.99" },
-    "circle-wood-coffee-table-01": { name: "Circle Wood Coffee Table with Storage Shelf", description: "This versatile circle wood coffee table features a practical storage shelf.", image: "/assets/products/Circle Wood Coffee Table with Storage Shelf.png", price: "$109.99" },
-    "potted-silk-indoor-plant-01": { name: "Realistic Potted Silk Artificial Indoor with Green Leaves", description: "Bring the beauty of nature indoors without the maintenance.", image: "/assets/products/Realistic Potted Silk Artificial Indoor with Green Leaves.png", price: "$103.99" },
-    "modern-pedestal-coffee-table-01": { name: "Modern Circle Coffee Table Pedestal Center Table for Apartment", description: "This stunning pedestal coffee table features a sleek circular design.", image: "/assets/products/Modern Circle Coffee Table Pedestal Center Table for Apartment.png", price: "$269.99" },
-    "wall-lamp-plug-in-cord-01": { name: "Modern Wall Lamp with Plug in Cord and Dimmable Switch", description: "Elevate your ambient lighting with this modern wall lamp.", image: "/assets/products/Wall Lamp with Plug in Cord and Dimmable Switch.png", price: "$36.99" },
-    "modern-couch-sofa-comfy-01": { name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests", description: "Experience ultimate comfort and style with this modern sofa.", image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png", price: "$439.99" },
-    "vintage-sofa-accent-pillows": { name: "Vintage Sofa with Accent Pillows", description: "This stunning vintage-inspired sofa serves as the perfect centerpiece.", image: "/assets/products/Vintage Sofa with Accent Pillows.png", price: "$967.99" },
-    "havalance-farmhouse-coffee-table": { name: "Havalance Farmhouse Rectangular Coffee Table", description: "The Havalance rectangular coffee table is a masterclass in rustic sophistication.", image: "/assets/products/Havalance Farmhouse Rectangular Coffee Table.png", price: "$442.54" },
-    "farmhouse-pier-shelves": { name: "Farmhouse Pier with 3 Adjustable Shelves", description: "Maximize your display space with the Farmhouse Pier.", image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png", price: "$130.48" },
-    "french-country-distressed-server": { name: "French Country Distressed Dining Room Server", description: "Elegant and versatile, this French Country Distressed Server.", image: "/assets/products/French Country Distressed Dining Room Server.png", price: "$1,030.73" },
-    "vintage-rose-wall-decor": { name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor", description: "Complete your cottagecore aesthetic with this Vintage Rose Wall Decor.", image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png", price: "$15.99" },
-    "industrial-entertainment-center-01": { name: "Modern Entertainment Center with Large Storage Cabinet", description: "This sleek and spacious entertainment center offers a perfect blend of modern design.", image: "/assets/products/Entertainment Center with Large Storage Cabinet for Living Room.png", price: "$126.99" },
-    "industrial-display-cabinet-01": { name: "Display Cabinet with 4 Glass Doors and Internal Lighting", description: "Showcase your favorite decor with this elegant display cabinet.", image: "/assets/products/Display Cabinet with 4 Glass Doors and Lights.png", price: "$299.99" },
-    "industrial-floor-lamp-01": { name: "Modern Minimalist Floor Lamp with Beige Fabric Shade", description: "Add soft, ambient warmth to your room with this sophisticated floor lamp.", image: "/assets/products/Modern Floor Lamp Simple Design with Beige Shade, Floor Lamps for Living Room.png", price: "$49.99" },
-    "mid-century-sideboard-01": { name: "Mid Century Modern Sideboard Buffet Cabinet", description: "Elevate your home storage with this Mid Century Modern Sideboard Buffet Cabinet.", image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png", price: "$229.90" },
-    "valleys-landscape-art-01": { name: "Valleys Landscape Wilderness Impressionism Traditional Wall Art", description: "Bring the serene beauty of the wilderness into your living room.", image: "/assets/products/Valleys Landscape Wilderness Impressionism Traditional for Living Room.png", price: "$72.59" },
-    "modern-wooden-coffee-table-01": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "$249.99" },
-    "mid-century-accent-chair-01": { name: "Mid-Century Accent Chair Modern Retro Leisure Chair", description: "Add a touch of retro charm to your living space.", image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png", price: "$125.98" },
-    "dark-academia-coffee-table": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "$249.99" },
-    "dark-academia-wall-art": { name: "Valleys Landscape Wilderness Impressionism Traditional Wall Art", description: "Bring the serene beauty of the wilderness into your living room.", image: "/assets/products/Valleys Landscape Wilderness Impressionism Traditional for Living Room.png", price: "$169.99" },
-    "dark-academia-sofa": { name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests", description: "Experience ultimate comfort and style with this modern sofa.", image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png", price: "$439.99" },
-    "dark-academia-chair": { name: "Mid-Century Accent Chair Modern Retro Leisure Chair", description: "Add a touch of retro charm to your living space.", image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png", price: "$135.99" },
-    "dark-academia-floor-lamp": { name: "Modern Floor Lamp Simple Design with Beige Shade", description: "Add soft, ambient warmth to your room with this sophisticated floor lamp.", image: "/assets/products/Modern Floor Lamp Simple Design with Beige Shade, Floor Lamps for Living Room.png", price: "$64.99" },
-    "modern-wooden-coffee-table-library": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "$249.99" },
-    "modern-couch-sofa-library": { name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests", description: "Experience ultimate comfort and style with this modern sofa.", image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png", price: "$439.99" },
-    "mid-century-sideboard-library": { name: "Mid Century Modern Sideboard Buffet Cabinet", description: "Elevate your home storage with this Mid Century Modern Sideboard Buffet Cabinet.", image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png", price: "$229.90" },
-    "mid-century-accent-chair-library": { name: "Mid-Century Accent Chair Modern Retro Leisure Chair", description: "Add a touch of retro charm to your living space.", image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png", price: "$116.99" },
-    "arched-pantry-cabinet-library": { name: "Arched Pantry Cabinet", description: "Add architectural interest and functional storage with this Arched Pantry Cabinet.", image: "/assets/products/Arched Pantry Cabinet.png", price: "$259.99" },
-    "modern-wooden-coffee-table-da-2": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "Elevate your living space with this sophisticated modern wooden coffee table.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "$249.99" },
-    "mid-century-sideboard-da-2": { name: "Mid Century Modern Sideboard Buffet Cabinet", description: "This Mid Century Modern Sideboard Buffet Cabinet blends timeless design with practical storage.", image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png", price: "$229.90" },
-    "display-cabinet-da-2": { name: "Display Cabinet with 4 Glass Doors and Lights", description: "Showcase your most treasured curiosities with this stunning display cabinet.", image: "/assets/products/Display Cabinet with 4 Glass Doors and Lights.png", price: "$309.99" },
-    "vintage-sofa-fcc": { name: "Vintage Sofa with Accent Pillows", description: "Experience the ultimate in traditional luxury with this vintage-inspired cottage sofa.", image: "/assets/products/Vintage Sofa with Accent Pillows.png", price: "$967.99" },
-    "farmhouse-coffee-table-fcc": { name: "Havalance Farmhouse Rectangular Coffee Table", description: "The Havalance rectangular coffee table brings architectural interest to your living space.", image: "/assets/products/Havalance Farmhouse Rectangular Coffee Table.png", price: "$429.76" },
-    "distressed-server-fcc": { name: "French Country Distressed Dining Room Server", description: "Elevate your storage solutions with this exquisite French Country Distressed Server.", image: "/assets/products/French Country Distressed Dining Room Server.png", price: "$999.99" },
-    "farmhouse-pier-fcc": { name: "Farmhouse Pier with 3 Adjustable Shelves", description: "Maximize your vertical display with the Farmhouse Pier.", image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png", price: "$130.48" },
-    "vintage-rose-decor-fcc": { name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor", description: "Add a romantic final touch to your walls with this charming Vintage Rose Wall Decor.", image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png", price: "$15.99" },
-    "vanity-desk-01": { name: "Makeup Vanity Desk with Lighted Mirror & Power Strip", description: "This premium makeup vanity desk combines vintage charm with contemporary utility.", image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg", price: "$199.99" },
-    "nolita-leather-sofa-01": { name: "POLY & BARK Nolita 85\" Leather Sofa", description: "This premium 85-inch sofa is crafted from top-tier Italian leather and features feather-down comfort toppers.", image: "https://www.polyandbark.com/cdn/shop/products/LR-681-TAN_2_ae214d9f-0b3a-496d-beda-ddc3ac0c7a3d_1500x.jpg", price: "$1,949" },
-    "livelyglow-vanity-01": { name: "LIVELYGLOW Makeup Vanity Desk with Lighted Mirror & Power Outlet", description: "This comprehensive vanity set combines modern aesthetics with practical utility.", image: "https://m.media-amazon.com/images/P/B0GG9C164R.01._SCLZZZZZZZ_SX1500_.jpg", price: "$109.99" },
+    "boho-sectional-01": { name: "Cream Comfort L-Shaped Sectional", description: "This plush cream sectional sofa offers the perfect balance of modern design and cozy comfort.", image: "/assets/products/A1.png", price: "Check the Price on Amazon" },
+    "boho-pouf-01": { name: "Natural Jute Hand-Woven Pouf", description: "Add organic texture and extra seating with this hand-woven jute pouf.", image: "/assets/products/A2.png", price: "Check the Price on Amazon" },
+    "boho-coffee-table-01": { name: "Round Oak Finish Coffee Table", description: "A minimalist round coffee table with an oak finish that adds warmth.", image: "/assets/products/A3.png", price: "Check the Price on Amazon" },
+    "boho-sideboard-01": { name: "Natural Wood Grain Sideboard", description: "This elegant sideboard features a beautiful natural wood grain and ample storage.", image: "/assets/products/A4.png", price: "Check the Price on Amazon" },
+    "boho-wall-art-01": { name: "Tranquil Botanical Wall Art Set", description: "A set of three abstract botanical art pieces that capture the essence of nature.", image: "/assets/products/A5.png", price: "Check the Price on Amazon" },
+    "boho-mirror-starburst": { name: "Natural Rattan Starburst Wall Mirror - Artisanal Boho Decor", description: "This handcrafted natural rattan starburst mirror is the quintessential bohemian wall decor.", image: "/assets/products/11.png", price: "Check the Price on Amazon" },
+    "boho-lamp-woven": { name: "Woven Grass Ambient Table Lamp - Natural Fiber Lighting", description: "Illuminate your space with this stunning woven grass table lamp.", image: "/assets/products/22.png", price: "Check the Price on Amazon" },
+    "boho-vase-ceramic": { name: "Hand-Painted Ceramic Botanical Bud Vase - Boho Chic Pottery", description: "Add a touch of artisanal charm with this hand-painted ceramic botanical bud vase.", image: "/assets/products/33.png", price: "Check the Price on Amazon" },
+    "boho-pampas-bundle": { name: "Premium Dried Pampas Grass Bundle - Tall Fluffy Plumes", description: "Elevate your interior design with our premium dried pampas grass arrangement.", image: "/assets/products/44.png", price: "Check the Price on Amazon" },
+    "boho-basket-seagrass": { name: "Seagrass Storage Basket with Tassels - Woven Boho Organizer", description: "Stay organized in style with this seagrass storage basket.", image: "/assets/products/55.png", price: "Check the Price on Amazon" },
+    "boho-pillow-macrame": { name: "Textured Macramé Fringed Throw Pillow - Scandi-Boho Accent", description: "Complete your sofa styling with this textured macramé throw pillow.", image: "/assets/products/66.png", price: "Check the Price on Amazon" },
+    "sectional-sofa-01": { name: "Oversized Modular Sectional Sofa, FSC Certified L Shaped", description: "This premium oversized modular sectional sofa offers ultimate lounging comfort.", image: "/assets/products/Oversized Modular Sectional Sofa, FSC Certified L Shaped.png", price: "Check the Price on Amazon" },
+    "floating-shelves-01": { name: "Long Floating Shelves for Wall Set of 4", description: "A set of four long floating shelves that provide elegant storage and display space.", image: "/assets/products/Long Floating Shelves for Wall Set of 4.png", price: "Check the Price on Amazon" },
+    "full-body-mirror-01": { name: "Oversized Full Body Mirrors with Aluminum Frame", description: "Make your living space feel twice as large with this oversized full-body mirror.", image: "/assets/products/Oversized Full Body Mirrors with Aluminum Frame.png", price: "Check the Price on Amazon" },
+    "corner-night-stand-01": { name: "3 Color Lights Corner Night Stand", description: "Enhance your mood lighting with this versatile corner stand.", image: "/assets/products/3 Color Lights Corner Night Stand.png", price: "Check the Price on Amazon" },
+    "boho-rug-01": { name: "Boho Floral Washable Girls Bedroom Rug", description: "Add a touch of soft pattern and warmth with this washable boho floral rug.", image: "/assets/products/Boho Floral Washable Girls Bedroom Rug.png", price: "Check the Price on Amazon" },
+    "velvet-sofa-rose": { name: "Valour Performance Velvet Sofa, Dusty Rose", description: "This elegant dusty rose velvet sofa combines mid-century modern design with luxurious comfort.", image: "/assets/products/Valour Performance Velvet Sofa, Dusty Rose.png", price: "Check the Price on Amazon" },
+    "ornate-gold-mirror": { name: "Ornate Baroque Vintage Gold Mirror", description: "Add a touch of historic grandeur to your home with this Ornate Baroque Vintage Gold Mirror.", image: "/assets/products/Ornate Baroque Vintage Gold Mirror.png", price: "Check the Price on Amazon" },
+    "wooden-center-table": { name: "Wooden Center Table with Storage, Rectangle Living Room Table", description: "This functional yet stylish wooden center table brings natural warmth to your living space.", image: "/assets/products/Wooden Center Table with Storage, Rectangle Living Room Table.png", price: "Check the Price on Amazon" },
+    "bohemian-shag-rug": { name: "Flash Furniture Roxy Geometric Style Bohemian Shag Area Rug", description: "Transform your floor with the Roxy Geometric Bohemian Shag Rug.", image: "/assets/products/Flash Furniture Roxy Geometric Style Bohemian Shag Area Rug.png", price: "Check the Price on Amazon" },
+    "modular-memory-foam-couch-01": { name: "Modular Memory Foam Couches for Living Room", description: "Experience cloud-like comfort with this modular memory foam sectional.", image: "/assets/products/Modular Memory Foam Couches for Living Room.png", price: "Check the Price on Amazon" },
+    "jute-pouf-ottoman-01": { name: "Jute Circular Jute Pouf Ottoman - Braided Pouffe Accent Sitting", description: "Hand-braided from natural fiber, this circular jute pouf adds organic texture.", image: "/assets/products/Jute Circular Jute Pouf Ottoman - Braided Pouffe Accent Sitting.png", price: "Check the Price on Amazon" },
+    "triple-wide-bookshelf-01": { name: "Bookshelf Triple Wide Wood Bookcase Storage with Adjustable Shelves", description: "An elegant and spacious storage solution, this triple-wide wood bookcase.", image: "/assets/products/Bookshelf Triple Wide Wood Bookcase Storage with Adjustable Shelves.png", price: "Check the Price on Amazon" },
+    "round-end-table-01": { name: "Round End Table with 3 Storage Shelves for Living Room", description: "Keep your essentials within reach with this stylish round end table.", image: "/assets/products/Round End Table with 3 Storage Shelves for Living Room.png", price: "Check the Price on Amazon" },
+    "modern-loveseat-sofa-01": { name: "Modern Loveseat Sofa for Living Room", description: "This stylish modern loveseat sofa is the perfect centerpiece for a contemporary living room.", image: "/assets/products/Modern Loveseat Sofa for Living Room.png", price: "Check the Price on Amazon" },
+    "rattan-buffet-cabinet-01": { name: "Rattan Buffet Cabinet with Storage", description: "Enhance your storage with this elegant Rattan Buffet Cabinet.", image: "/assets/products/Rattan Buffet Cabinet with Storage.png", price: "Check the Price on Amazon" },
+    "circle-wood-coffee-table-01": { name: "Circle Wood Coffee Table with Storage Shelf", description: "This versatile circle wood coffee table features a practical storage shelf.", image: "/assets/products/Circle Wood Coffee Table with Storage Shelf.png", price: "Check the Price on Amazon" },
+    "potted-silk-indoor-plant-01": { name: "Realistic Potted Silk Artificial Indoor with Green Leaves", description: "Bring the beauty of nature indoors without the maintenance.", image: "/assets/products/Realistic Potted Silk Artificial Indoor with Green Leaves.png", price: "Check the Price on Amazon" },
+    "modern-pedestal-coffee-table-01": { name: "Modern Circle Coffee Table Pedestal Center Table for Apartment", description: "This stunning pedestal coffee table features a sleek circular design.", image: "/assets/products/Modern Circle Coffee Table Pedestal Center Table for Apartment.png", price: "Check the Price on Amazon" },
+    "wall-lamp-plug-in-cord-01": { name: "Modern Wall Lamp with Plug in Cord and Dimmable Switch", description: "Elevate your ambient lighting with this modern wall lamp.", image: "/assets/products/Wall Lamp with Plug in Cord and Dimmable Switch.png", price: "Check the Price on Amazon" },
+    "modern-couch-sofa-comfy-01": { name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests", description: "Experience ultimate comfort and style with this modern sofa.", image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png", price: "Check the Price on Amazon" },
+    "vintage-sofa-accent-pillows": { name: "Vintage Sofa with Accent Pillows", description: "This stunning vintage-inspired sofa serves as the perfect centerpiece.", image: "/assets/products/Vintage Sofa with Accent Pillows.png", price: "Check the Price on Amazon" },
+    "havalance-farmhouse-coffee-table": { name: "Havalance Farmhouse Rectangular Coffee Table", description: "The Havalance rectangular coffee table is a masterclass in rustic sophistication.", image: "/assets/products/Havalance Farmhouse Rectangular Coffee Table.png", price: "Check the Price on Amazon" },
+    "farmhouse-pier-shelves": { name: "Farmhouse Pier with 3 Adjustable Shelves", description: "Maximize your display space with the Farmhouse Pier.", image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png", price: "Check the Price on Amazon" },
+    "french-country-distressed-server": { name: "French Country Distressed Dining Room Server", description: "Elegant and versatile, this French Country Distressed Server.", image: "/assets/products/French Country Distressed Dining Room Server.png", price: "Check the Price on Amazon" },
+    "vintage-rose-wall-decor": { name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor", description: "Complete your cottagecore aesthetic with this Vintage Rose Wall Decor.", image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png", price: "Check the Price on Amazon" },
+    "industrial-entertainment-center-01": { name: "Modern Entertainment Center with Large Storage Cabinet", description: "This sleek and spacious entertainment center offers a perfect blend of modern design.", image: "/assets/products/Entertainment Center with Large Storage Cabinet for Living Room.png", price: "Check the Price on Amazon" },
+    "industrial-display-cabinet-01": { name: "Display Cabinet with 4 Glass Doors and Internal Lighting", description: "Showcase your favorite decor with this elegant display cabinet.", image: "/assets/products/Display Cabinet with 4 Glass Doors and Lights.png", price: "Check the Price on Amazon" },
+    "industrial-floor-lamp-01": { name: "Modern Minimalist Floor Lamp with Beige Fabric Shade", description: "Add soft, ambient warmth to your room with this sophisticated floor lamp.", image: "/assets/products/Modern Floor Lamp Simple Design with Beige Shade, Floor Lamps for Living Room.png", price: "Check the Price on Amazon" },
+    "mid-century-sideboard-01": { name: "Mid Century Modern Sideboard Buffet Cabinet", description: "Elevate your home storage with this Mid Century Modern Sideboard Buffet Cabinet.", image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png", price: "Check the Price on Amazon" },
+    "valleys-landscape-art-01": { name: "Valleys Landscape Wilderness Impressionism Traditional Wall Art", description: "Bring the serene beauty of the wilderness into your living room.", image: "/assets/products/Valleys Landscape Wilderness Impressionism Traditional for Living Room.png", price: "Check the Price on Amazon" },
+    "modern-wooden-coffee-table-01": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "Check the Price on Amazon" },
+    "mid-century-accent-chair-01": { name: "Mid-Century Accent Chair Modern Retro Leisure Chair", description: "Add a touch of retro charm to your living space.", image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png", price: "Check the Price on Amazon" },
+    "dark-academia-coffee-table": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "Check the Price on Amazon" },
+    "dark-academia-wall-art": { name: "Valleys Landscape Wilderness Impressionism Traditional Wall Art", description: "Bring the serene beauty of the wilderness into your living room.", image: "/assets/products/Valleys Landscape Wilderness Impressionism Traditional for Living Room.png", price: "Check the Price on Amazon" },
+    "dark-academia-sofa": { name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests", description: "Experience ultimate comfort and style with this modern sofa.", image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png", price: "Check the Price on Amazon" },
+    "dark-academia-chair": { name: "Mid-Century Accent Chair Modern Retro Leisure Chair", description: "Add a touch of retro charm to your living space.", image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png", price: "Check the Price on Amazon" },
+    "dark-academia-floor-lamp": { name: "Modern Floor Lamp Simple Design with Beige Shade", description: "Add soft, ambient warmth to your room with this sophisticated floor lamp.", image: "/assets/products/Modern Floor Lamp Simple Design with Beige Shade, Floor Lamps for Living Room.png", price: "Check the Price on Amazon" },
+    "modern-wooden-coffee-table-library": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "This Modern Wooden Coffee Table features a high-quality solid wood veneer.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "Check the Price on Amazon" },
+    "modern-couch-sofa-library": { name: "Modern Couch and Sofa, Comfy Armrests and Seats and Backrests", description: "Experience ultimate comfort and style with this modern sofa.", image: "/assets/products/Modern Couch and Sofa, Comfy Armrests and Seats and Backrests.png", price: "Check the Price on Amazon" },
+    "mid-century-sideboard-library": { name: "Mid Century Modern Sideboard Buffet Cabinet", description: "Elevate your home storage with this Mid Century Modern Sideboard Buffet Cabinet.", image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png", price: "Check the Price on Amazon" },
+    "mid-century-accent-chair-library": { name: "Mid-Century Accent Chair Modern Retro Leisure Chair", description: "Add a touch of retro charm to your living space.", image: "/assets/products/Mid-Century Accent Chair Modern Retro Leisure Chair.png", price: "Check the Price on Amazon" },
+    "arched-pantry-cabinet-library": { name: "Arched Pantry Cabinet", description: "Add architectural interest and functional storage with this Arched Pantry Cabinet.", image: "/assets/products/Arched Pantry Cabinet.png", price: "Check the Price on Amazon" },
+    "modern-wooden-coffee-table-da-2": { name: "Modern Wooden Coffee Table with Solid Wood Veneer", description: "Elevate your living space with this sophisticated modern wooden coffee table.", image: "/assets/products/Modern Wooden Coffee Table with Solid Wood Veneered.png", price: "Check the Price on Amazon" },
+    "mid-century-sideboard-da-2": { name: "Mid Century Modern Sideboard Buffet Cabinet", description: "This Mid Century Modern Sideboard Buffet Cabinet blends timeless design with practical storage.", image: "/assets/products/Mid Century Modern Sideboard Buffet Cabinet.png", price: "Check the Price on Amazon" },
+    "display-cabinet-da-2": { name: "Display Cabinet with 4 Glass Doors and Lights", description: "Showcase your most treasured curiosities with this stunning display cabinet.", image: "/assets/products/Display Cabinet with 4 Glass Doors and Lights.png", price: "Check the Price on Amazon" },
+    "vintage-sofa-fcc": { name: "Vintage Sofa with Accent Pillows", description: "Experience the ultimate in traditional luxury with this vintage-inspired cottage sofa.", image: "/assets/products/Vintage Sofa with Accent Pillows.png", price: "Check the Price on Amazon" },
+    "farmhouse-coffee-table-fcc": { name: "Havalance Farmhouse Rectangular Coffee Table", description: "The Havalance rectangular coffee table brings architectural interest to your living space.", image: "/assets/products/Havalance Farmhouse Rectangular Coffee Table.png", price: "Check the Price on Amazon" },
+    "distressed-server-fcc": { name: "French Country Distressed Dining Room Server", description: "Elevate your storage solutions with this exquisite French Country Distressed Server.", image: "/assets/products/French Country Distressed Dining Room Server.png", price: "Check the Price on Amazon" },
+    "farmhouse-pier-fcc": { name: "Farmhouse Pier with 3 Adjustable Shelves", description: "Maximize your vertical display with the Farmhouse Pier.", image: "/assets/products/Farmhouse Pier with 3 Adjustable Shelves.png", price: "Check the Price on Amazon" },
+    "vintage-rose-decor-fcc": { name: "Vintage Rose Wall Decor - 12x16 Coquette Wall Decor", description: "Add a romantic final touch to your walls with this charming Vintage Rose Wall Decor.", image: "/assets/products/Vintage Rose Wall Decor - 12x16 Coquette Wall Decor.png", price: "Check the Price on Amazon" },
+    "vanity-desk-01": { name: "Makeup Vanity Desk with Lighted Mirror & Power Strip", description: "This premium makeup vanity desk combines vintage charm with contemporary utility.", image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg", price: "Check the Price on Amazon" },
+    "nolita-leather-sofa-01": { name: "POLY & BARK Nolita 85\" Leather Sofa", description: "This premium 85-inch sofa is crafted from top-tier Italian leather and features feather-down comfort toppers.", image: "https://www.polyandbark.com/cdn/shop/products/LR-681-TAN_2_ae214d9f-0b3a-496d-beda-ddc3ac0c7a3d_1500x.jpg", price: "Check the Price on Amazon" },
+    "livelyglow-vanity-01": { name: "LIVELYGLOW Makeup Vanity Desk with Lighted Mirror & Power Outlet", description: "This comprehensive vanity set combines modern aesthetics with practical utility.", image: "https://m.media-amazon.com/images/P/B0GG9C164R.01._SCLZZZZZZZ_SX1500_.jpg", price: "Check the Price on Amazon" },
 };
 
 const inspirations: Record<string, { name: string; description: string; image: string }> = {
@@ -95,7 +95,7 @@ const inspirations: Record<string, { name: string; description: string; image: s
 };
 
 function cleanPrice(price?: string): string {
-    if (!price) return "0";
+    if (!price) return "";
     return price.replace(/[^0-9.]/g, "");
 }
 
@@ -111,23 +111,49 @@ function buildProductMetaTags(productId: string): string | null {
     const imageUrl = product.image.startsWith('http') ? product.image : `${SITE_URL}${product.image}`;
     const pageUrl = `${SITE_URL}/product/${productId}`;
     const numericPrice = cleanPrice(product.price);
+    const hasNumericPrice = numericPrice.length > 0;
 
-    const jsonLd = JSON.stringify({
+    const productJsonLd: {
+        "@context": string;
+        "@type": string;
+        name: string;
+        image: string;
+        description: string;
+        brand: { "@type": string; name: string };
+        offers?: {
+            "@type": string;
+            url: string;
+            priceCurrency: string;
+            price: string;
+            availability: string;
+            itemCondition: string;
+        };
+    } = {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": product.name,
         "image": imageUrl,
         "description": product.description,
         "brand": { "@type": "Brand", "name": SITE_NAME },
-        "offers": {
+    };
+
+    if (hasNumericPrice) {
+        productJsonLd.offers = {
             "@type": "Offer",
             "url": pageUrl,
             "priceCurrency": "USD",
             "price": numericPrice,
             "availability": "https://schema.org/InStock",
             "itemCondition": "https://schema.org/NewCondition"
-        }
-    });
+        };
+    }
+
+    const jsonLd = JSON.stringify(productJsonLd);
+    const priceMetaTags = hasNumericPrice ? `
+    <meta property="og:price:amount" content="${numericPrice}" />
+    <meta property="og:price:currency" content="USD" />
+    <meta property="product:price:amount" content="${numericPrice}" />
+    <meta property="product:price:currency" content="USD" />` : "";
 
     return `
     <title>${encodeHtml(fullTitle)}</title>
@@ -139,10 +165,7 @@ function buildProductMetaTags(productId: string): string | null {
     <meta property="og:image" content="${imageUrl}" />
     <meta property="og:url" content="${pageUrl}" />
     <meta property="og:type" content="og:product" />
-    <meta property="og:price:amount" content="${numericPrice}" />
-    <meta property="og:price:currency" content="USD" />
-    <meta property="product:price:amount" content="${numericPrice}" />
-    <meta property="product:price:currency" content="USD" />
+    ${priceMetaTags}
     <meta property="product:availability" content="instock" />
     <meta property="product:brand" content="${SITE_NAME}" />
     <meta property="product:condition" content="new" />

@@ -89,7 +89,7 @@ const InspirationDetail = () => {
                             {inspiration.products.length === 1 && (
                                 <div className="mb-10">
                                     <div className="flex items-center gap-4 mb-6">
-                                        <p className="text-3xl font-serif text-primary font-medium">{inspiration.products[0].price || "Check Price"}</p>
+                                        <p className="text-3xl font-serif text-primary font-medium">{inspiration.products[0].price || "Check the Price on Amazon"}</p>
                                         <span className="text-xs text-muted-foreground uppercase tracking-widest border border-border px-2 py-1 rounded">Curated Selection</span>
                                     </div>
                                     <Button

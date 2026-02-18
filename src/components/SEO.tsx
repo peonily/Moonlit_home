@@ -32,19 +32,35 @@ export const SEO = ({
         ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
         : `${siteUrl}/og-image.png`;
 
-    // Function to clean price string for meta tags (e.g., "$1,299" -> "1299")
+    // Clean price-like strings for structured data/meta tags.
     const cleanPrice = (p?: string) => {
         if (!p) return "";
         return p.replace(/[^0-9.]/g, "");
     };
 
     const numericPrice = cleanPrice(price);
+    const hasNumericPrice = numericPrice.length > 0;
 
     // Schema.org JSON-LD
     const getJsonLd = () => {
         switch (type) {
-            case "product":
-                return {
+            case "product": {
+                const productJsonLd: {
+                    "@context": string;
+                    "@type": string;
+                    name: string;
+                    image: string;
+                    description?: string;
+                    brand: { "@type": string; name: string };
+                    offers?: {
+                        "@type": string;
+                        url: string;
+                        priceCurrency: string;
+                        price: string;
+                        availability: string;
+                        itemCondition: string;
+                    };
+                } = {
                     "@context": "https://schema.org/",
                     "@type": "Product",
                     "name": title || siteName,
@@ -54,15 +70,21 @@ export const SEO = ({
                         "@type": "Brand",
                         "name": siteName
                     },
-                    "offers": {
+                };
+
+                if (hasNumericPrice) {
+                    productJsonLd.offers = {
                         "@type": "Offer",
                         "url": canonicalUrl,
                         "priceCurrency": currency,
-                        "price": numericPrice || "0",
+                        "price": numericPrice,
                         "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
                         "itemCondition": "https://schema.org/NewCondition"
-                    }
-                };
+                    };
+                }
+
+                return productJsonLd;
+            }
             case "article":
                 return {
                     "@context": "https://schema.org",
@@ -120,14 +142,17 @@ export const SEO = ({
             {type === "product" ? (
                 <>
                     <meta property="og:type" content="og:product" />
-                    <meta property="product:price:amount" content={numericPrice || "0"} />
-                    <meta property="product:price:currency" content={currency} />
+                    {hasNumericPrice && (
+                        <>
+                            <meta property="product:price:amount" content={numericPrice} />
+                            <meta property="product:price:currency" content={currency} />
+                            <meta property="og:price:amount" content={numericPrice} />
+                            <meta property="og:price:currency" content={currency} />
+                        </>
+                    )}
                     <meta property="product:availability" content={availability} />
                     <meta property="og:availability" content={availability} />
 
-                    {/* Shoppable Pin specific tags */}
-                    <meta property="og:price:amount" content={numericPrice || "0"} />
-                    <meta property="og:price:currency" content={currency} />
                     <meta property="product:brand" content={siteName} />
                     <meta property="product:condition" content="new" />
                     <meta property="product:retailer_item_id" content={title?.toLowerCase().replace(/\s+/g, '-') || "product-id"} />
