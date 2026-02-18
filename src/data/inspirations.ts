@@ -779,5 +779,25 @@ export const inspirations: Inspiration[] = [
                 pinCurrency: "USD"
             }
         ]
+    },
+    {
+        id: "mixpatio-outdoor-patio-furniture-set-inspiration",
+        slug: "mixpatio-outdoor-patio-furniture-set",
+        categories: ["amazon-finds", "pieces"],
+        image: "https://m.media-amazon.com/images/I/A1zEgnESPlL._AC_SL1500_.jpg",
+        name: "MIXPATIO Outdoor Patio Furniture Set (8 Piece)",
+        description: "An 8-piece outdoor rattan patio furniture set with swivel seating, armchairs, ottomans, and thick cushions for deck, backyard, and garden spaces.",
+        products: [
+            {
+                id: "mixpatio-outdoor-patio-furniture-set-01",
+                name: "MIXPATIO Outdoor Patio Furniture Set, 8 Piece",
+                description: "A complete outdoor conversation set with two swivel sofas, two leg sofas, two armchairs, and two ottomans. Designed for larger patio layouts with deep cushions and a coordinated wicker look.",
+                link: "https://amzn.to/4qEpuT3",
+                image: "https://m.media-amazon.com/images/I/A1zEgnESPlL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinPrice: "819.99",
+                pinCurrency: "USD"
+            }
+        ]
     }
 ];
