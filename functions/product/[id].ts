@@ -1,22 +1,26 @@
-import { buildProductLandingHtmlById } from "../_lib/pinterestMeta";
+import { buildProductMetaTagsById, injectMetaIntoHtml } from "../_lib/pinterestMeta";
 
 export const onRequest: PagesFunction = async (context) => {
     const id = context.params?.id;
+    const response = await context.next();
 
     if (typeof id !== "string") {
-        return context.next();
+        return response;
     }
 
-    const productHtml = buildProductLandingHtmlById(id);
-    if (!productHtml) {
-        return context.next();
+    const metaTags = buildProductMetaTagsById(id);
+    if (!metaTags) {
+        return response;
     }
 
-    return new Response(productHtml, {
-        status: 200,
+    const html = await response.text();
+    const modifiedHtml = injectMetaIntoHtml(html, metaTags);
+
+    return new Response(modifiedHtml, {
+        status: response.status,
         headers: {
+            ...Object.fromEntries(response.headers.entries()),
             "content-type": "text/html;charset=UTF-8",
-            "cache-control": "public, max-age=600",
         },
     });
 };
