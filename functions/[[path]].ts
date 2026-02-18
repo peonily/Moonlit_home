@@ -71,9 +71,10 @@ const products: Record<string, { name: string; description: string; image: strin
     "vanity-desk-01": { name: "Makeup Vanity Desk with Lighted Mirror & Power Strip", description: "This premium makeup vanity desk combines vintage charm with contemporary utility.", image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg", price: "Check the Price on Amazon" },
     "nolita-leather-sofa-01": { name: "POLY & BARK Nolita 85\" Leather Sofa", description: "This premium 85-inch sofa is crafted from top-tier Italian leather and features feather-down comfort toppers.", image: "https://www.polyandbark.com/cdn/shop/products/LR-681-TAN_2_ae214d9f-0b3a-496d-beda-ddc3ac0c7a3d_1500x.jpg", price: "Check the Price on Amazon" },
     "livelyglow-vanity-01": { name: "LIVELYGLOW Makeup Vanity Desk with Lighted Mirror & Power Outlet", description: "This comprehensive vanity set combines modern aesthetics with practical utility.", image: "https://m.media-amazon.com/images/P/B0GG9C164R.01._SCLZZZZZZZ_SX1500_.jpg", price: "Check the Price on Amazon" },
+    "xburmo-small-round-end-table-01": { name: "XBurmo Small Round End Table", description: "This space-saving accent table features a round tabletop and lower shelf to keep books, remotes, or decor within reach.", image: "https://m.media-amazon.com/images/I/81TbO7iVVzL._AC_SL1500_.jpg", price: "Check the Price on Amazon" },
 };
 
-const inspirations: Record<string, { name: string; description: string; image: string }> = {
+const inspirations: Record<string, { name: string; description: string; image: string; productId?: string }> = {
     "serene-arched-mirror-living-room": { name: "Luxe Minimalist Arched Mirror Living Room", description: "A bright and airy space featuring a statement gold mirror, modular comfort, and oak floating shelving.", image: "/assets/inspirations/living-room-main.jpg" },
     "bohemian-serenity-living-room": { name: "Bohemian Serenity Living Room", description: "A harmonious blend of earthy tones and organic textures.", image: "/assets/products/IMG_20260204_170437.jpg" },
     "organic-bohemian-living-room": { name: "Eclectic Organic Bohemian Living Room Inspiration", description: "Transform your home with this eclectic organic bohemian living room design.", image: "/assets/products/IMG_20260204_151258.jpg" },
@@ -92,6 +93,7 @@ const inspirations: Record<string, { name: string; description: string; image: s
     "vintage-makeup-vanity-desk": { name: "Vintage Makeup Vanity Desk with Lighted Mirror", description: "Elegant and functional, this vintage-inspired makeup vanity desk features a large lighted mirror.", image: "/assets/products/Makeup Vanity Desk with Lighted Mirror & Power Strip.jpg" },
     "nolita-leather-sofa": { name: "POLY & BARK Nolita Leather Sofa", description: "Experience the perfect blend of modern sophistication and timeless comfort with the Nolita Leather Sofa.", image: "https://www.polyandbark.com/cdn/shop/files/LR-681-TAN-NolitaSofainCognacTan-Lifestyle1-2890x1500px_1500x.jpg" },
     "livelyglow-makeup-vanity-desk": { name: "LIVELYGLOW Makeup Vanity Desk Set with Lighted Mirror", description: "Elevate your beauty routine with this sleek and functional makeup vanity desk.", image: "https://m.media-amazon.com/images/P/B0GG9C164R.01._SCLZZZZZZZ_SX1500_.jpg" },
+    "xburmo-small-round-end-table": { name: "XBurmo Small Round End Table", description: "A compact round side table with two-tier storage that works well for small living rooms, bedrooms, and reading corners.", image: "https://m.media-amazon.com/images/I/81TbO7iVVzL._AC_SL1500_.jpg", productId: "xburmo-small-round-end-table-01" },
 };
 
 function cleanPrice(price?: string): string {
@@ -181,9 +183,81 @@ function buildInspirationMetaTags(slug: string): string | null {
     const inspiration = inspirations[slug];
     if (!inspiration) return null;
 
+    const pageUrl = `${SITE_URL}/inspiration/${slug}`;
+    const linkedProduct = inspiration.productId ? products[inspiration.productId] : null;
+
+    if (linkedProduct) {
+        const fullTitle = `${linkedProduct.name} | ${SITE_NAME}`;
+        const imageUrl = linkedProduct.image.startsWith('http') ? linkedProduct.image : `${SITE_URL}${linkedProduct.image}`;
+        const numericPrice = cleanPrice(linkedProduct.price);
+        const hasNumericPrice = numericPrice.length > 0;
+
+        const productJsonLd: {
+            "@context": string;
+            "@type": string;
+            name: string;
+            image: string;
+            description: string;
+            brand: { "@type": string; name: string };
+            offers?: {
+                "@type": string;
+                url: string;
+                priceCurrency: string;
+                price: string;
+                availability: string;
+                itemCondition: string;
+            };
+        } = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": linkedProduct.name,
+            "image": imageUrl,
+            "description": linkedProduct.description,
+            "brand": { "@type": "Brand", "name": SITE_NAME },
+        };
+
+        if (hasNumericPrice) {
+            productJsonLd.offers = {
+                "@type": "Offer",
+                "url": pageUrl,
+                "priceCurrency": "USD",
+                "price": numericPrice,
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition"
+            };
+        }
+
+        const jsonLd = JSON.stringify(productJsonLd);
+        const priceMetaTags = hasNumericPrice ? `
+    <meta property="og:price:amount" content="${numericPrice}" />
+    <meta property="og:price:currency" content="USD" />
+    <meta property="product:price:amount" content="${numericPrice}" />
+    <meta property="product:price:currency" content="USD" />` : "";
+
+        return `
+    <title>${encodeHtml(fullTitle)}</title>
+    <meta name="description" content="${encodeHtml(linkedProduct.description)}" />
+    <link rel="canonical" href="${pageUrl}" />
+    <meta property="og:site_name" content="${SITE_NAME}" />
+    <meta property="og:title" content="${encodeHtml(fullTitle)}" />
+    <meta property="og:description" content="${encodeHtml(linkedProduct.description)}" />
+    <meta property="og:image" content="${imageUrl}" />
+    <meta property="og:url" content="${pageUrl}" />
+    <meta property="og:type" content="og:product" />
+    ${priceMetaTags}
+    <meta property="product:availability" content="instock" />
+    <meta property="product:brand" content="${SITE_NAME}" />
+    <meta property="product:condition" content="new" />
+    <meta property="product:retailer_item_id" content="${inspiration.productId}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${encodeHtml(fullTitle)}" />
+    <meta name="twitter:description" content="${encodeHtml(linkedProduct.description)}" />
+    <meta name="twitter:image" content="${imageUrl}" />
+    <script type="application/ld+json">${jsonLd}</script>`;
+    }
+
     const fullTitle = `${inspiration.name} | ${SITE_NAME}`;
     const imageUrl = inspiration.image.startsWith('http') ? inspiration.image : `${SITE_URL}${inspiration.image}`;
-    const pageUrl = `${SITE_URL}/inspiration/${slug}`;
 
     const jsonLd = JSON.stringify({
         "@context": "https://schema.org",

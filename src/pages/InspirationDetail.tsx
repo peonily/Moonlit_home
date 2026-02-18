@@ -11,6 +11,7 @@ import { SEO } from "@/components/SEO";
 const InspirationDetail = () => {
     const { slug } = useParams<{ slug: string }>();
     const inspiration = inspirations.find(ins => ins.slug === slug);
+    const singleProduct = inspiration?.products.length === 1 ? inspiration.products[0] : null;
 
     if (!inspiration) {
         return (
@@ -26,10 +27,11 @@ const InspirationDetail = () => {
     return (
         <div className="min-h-screen bg-background">
             <SEO
-                title={inspiration.name}
-                description={inspiration.description}
-                image={inspiration.image}
-                type="article"
+                title={singleProduct ? singleProduct.name : inspiration.name}
+                description={singleProduct ? singleProduct.description : inspiration.description}
+                image={singleProduct ? singleProduct.image : inspiration.image}
+                type={singleProduct ? "product" : "article"}
+                price={singleProduct?.price}
             />
             <Header />
             <main className="pt-24 pb-20">

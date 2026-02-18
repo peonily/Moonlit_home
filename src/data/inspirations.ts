@@ -737,5 +737,23 @@ export const inspirations: Inspiration[] = [
                 price: "Check the Price on Amazon"
             }
         ]
+    },
+    {
+        id: "xburmo-round-end-table-inspiration",
+        slug: "xburmo-small-round-end-table",
+        categories: ["amazon-finds", "pieces"],
+        image: "https://m.media-amazon.com/images/I/81TbO7iVVzL._AC_SL1500_.jpg",
+        name: "XBurmo Small Round End Table",
+        description: "A compact round side table with two-tier storage that works well for small living rooms, bedrooms, and reading corners. Its clean profile makes it easy to pair with modern, minimalist, and transitional decor styles.",
+        products: [
+            {
+                id: "xburmo-small-round-end-table-01",
+                name: "XBurmo Small Round End Table",
+                description: "This space-saving accent table features a round tabletop and lower shelf to keep books, remotes, or decor within reach. A practical Amazon find for adding functional style beside a sofa, chair, or bed.",
+                link: "https://amzn.to/4rVmrqv",
+                image: "https://m.media-amazon.com/images/I/81TbO7iVVzL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon"
+            }
+        ]
     }
 ];
