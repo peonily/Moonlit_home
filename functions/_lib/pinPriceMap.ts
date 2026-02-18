@@ -41,6 +41,7 @@ export const PIN_PRICE_MAP: Record<string, { amount: string; currency: string }>
     "mid-century-sideboard-da-2": { amount: "229.90", currency: "USD" },
     "mid-century-sideboard-library": { amount: "229.90", currency: "USD" },
     "mirror-01": { amount: "119.99", currency: "USD" },
+    "mixpatio-outdoor-patio-furniture-set-01": { amount: "819.99", currency: "USD" },
     "modern-couch-sofa-comfy-01": { amount: "439.99", currency: "USD" },
     "modern-couch-sofa-library": { amount: "439.99", currency: "USD" },
     "modern-loveseat-sofa-01": { amount: "362.69", currency: "USD" },
