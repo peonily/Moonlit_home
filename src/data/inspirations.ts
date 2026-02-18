@@ -755,5 +755,23 @@ export const inspirations: Inspiration[] = [
                 price: "Check the Price on Amazon"
             }
         ]
+    },
+    {
+        id: "apicizon-round-side-table-inspiration",
+        slug: "apicizon-small-round-side-table",
+        categories: ["amazon-finds", "pieces"],
+        image: "https://m.media-amazon.com/images/I/71uc+GBEsIL._AC_SL1500_.jpg",
+        name: "Apicizon Small Round Side Table",
+        description: "A compact round side table designed for small spaces, ideal as a nightstand or end table in bedrooms and living rooms. The two-tier layout adds practical storage while keeping a clean, modern look.",
+        products: [
+            {
+                id: "apicizon-small-round-side-table-01",
+                name: "Apicizon Small Round Side Table",
+                description: "A modern small-space accent table with a round top and lower shelf, easy assembly, and a versatile profile that works beside a sofa, armchair, or bed.",
+                link: "https://amzn.to/4kLiUZx",
+                image: "https://m.media-amazon.com/images/I/71uc+GBEsIL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon"
+            }
+        ]
     }
 ];
