@@ -7,6 +7,7 @@ export interface Product {
     price?: string;
     pinPrice?: string;
     pinCurrency?: string;
+    pinAvailability?: "instock" | "out-of-stock";
 }
 
 export interface Inspiration {
@@ -817,6 +818,26 @@ export const inspirations: Inspiration[] = [
                 price: "Check the Price on Amazon",
                 pinPrice: "750.00",
                 pinCurrency: "USD"
+            }
+        ]
+    },
+    {
+        id: "wisteria-lane-4-piece-patio-furniture-inspiration",
+        slug: "wisteria-lane-4-piece-patio-furniture-set",
+        categories: ["amazon-finds", "pieces", "garden"],
+        image: "https://m.media-amazon.com/images/I/91hsoyCpa5L._AC_SL1500_.jpg",
+        name: "Wisteria Lane 4 Piece Patio Furniture Set",
+        description: "A 4-piece outdoor patio conversation set with wicker construction, cushioned seating, and a glass-top table designed for backyard, deck, and garden spaces.",
+        products: [
+            {
+                id: "wisteria-lane-4-piece-patio-furniture-01",
+                name: "Wisteria Lane 4 Piece Patio Furniture Set",
+                description: "A weather-ready wicker outdoor set that includes a loveseat, two armchairs, and a glass-top coffee table for comfortable open-air lounging.",
+                link: "https://amzn.to/4qOrlVj",
+                image: "https://m.media-amazon.com/images/I/91hsoyCpa5L._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinCurrency: "USD",
+                pinAvailability: "out-of-stock"
             }
         ]
     }

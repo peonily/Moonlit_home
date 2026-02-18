@@ -46,6 +46,7 @@ const ProductDetail = () => {
                 price={product.price}
                 pinPrice={product.pinPrice}
                 currency={product.pinCurrency || "USD"}
+                availability={product.pinAvailability || "instock"}
             />
             <Header />
             <main className="pt-24 pb-20">

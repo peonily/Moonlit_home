@@ -36,6 +36,7 @@ const InspirationDetail = () => {
                 price={primaryProduct?.price}
                 pinPrice={primaryProduct?.pinPrice}
                 currency={primaryProduct?.pinCurrency || "USD"}
+                availability={primaryProduct?.pinAvailability || "instock"}
             />
             <Header />
             <main className="pt-24 pb-20">
