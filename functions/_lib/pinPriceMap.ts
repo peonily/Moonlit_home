@@ -60,6 +60,7 @@ export const PIN_PRICE_MAP: Record<string, { amount: string; currency: string }>
     "sofa-01": { amount: "40.99", currency: "USD" },
     "table-01": { amount: "168.66", currency: "USD" },
     "triple-wide-bookshelf-01": { amount: "649.99", currency: "USD" },
+    "udpatio-outdoor-conversation-set-01": { amount: "750.00", currency: "USD" },
     "valleys-landscape-art-01": { amount: "72.59", currency: "USD" },
     "vanity-desk-01": { amount: "225.99", currency: "USD" },
     "velvet-sofa-rose": { amount: "441.74", currency: "USD" },

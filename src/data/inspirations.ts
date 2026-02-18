@@ -799,5 +799,25 @@ export const inspirations: Inspiration[] = [
                 pinCurrency: "USD"
             }
         ]
+    },
+    {
+        id: "udpatio-outdoor-conversation-set-inspiration",
+        slug: "udpatio-5-piece-outdoor-conversation-set",
+        categories: ["amazon-finds", "pieces", "garden"],
+        image: "https://m.media-amazon.com/images/I/91PdkpvblZL._AC_SL1500_.jpg",
+        name: "UDPATIO Patio Furniture Set (5 Pieces)",
+        description: "A 5-piece outdoor patio conversation set with rocking swivel chairs, wicker rattan seating, a storage table, and waterproof covers for backyard, deck, or porch setups.",
+        products: [
+            {
+                id: "udpatio-outdoor-conversation-set-01",
+                name: "UDPATIO Patio Furniture Set, 5 Pieces Outdoor Conversation Set",
+                description: "A coordinated outdoor set with rocking swivel chairs, rattan sofa seating, and a storage table designed for comfort and durability in open-air living spaces.",
+                link: "https://amzn.to/4aIGbH3",
+                image: "https://m.media-amazon.com/images/I/91PdkpvblZL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinPrice: "750.00",
+                pinCurrency: "USD"
+            }
+        ]
     }
 ];
