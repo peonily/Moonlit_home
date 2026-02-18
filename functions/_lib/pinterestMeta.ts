@@ -173,8 +173,9 @@ export function buildInspirationMetaTagsBySlug(slug: string): string | null {
     const inspiration = inspirationIndex.get(slug);
     if (!inspiration) return null;
 
-    if (inspiration.products.length === 1) {
-        return buildProductMetaTags(inspiration.products[0], `${SITE_URL}/inspiration/${slug}`);
+    const primaryProduct = inspiration.products[0];
+    if (primaryProduct) {
+        return buildProductMetaTags(primaryProduct, `${SITE_URL}/inspiration/${slug}`);
     }
 
     return buildArticleMetaTags(inspiration, `${SITE_URL}/inspiration/${slug}`);
