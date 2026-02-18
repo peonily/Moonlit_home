@@ -840,5 +840,25 @@ export const inspirations: Inspiration[] = [
                 pinAvailability: "out-of-stock"
             }
         ]
+    },
+    {
+        id: "krofem-8-piece-outdoor-patio-furniture-inspiration",
+        slug: "krofem-8-piece-outdoor-patio-furniture-set",
+        categories: ["amazon-finds", "pieces", "garden"],
+        image: "https://m.media-amazon.com/images/I/91DzSEKHGfL._AC_SL1500_.jpg",
+        name: "KROFEM 8 Pieces Outdoor Wicker Rattan Patio Furniture Set",
+        description: "An 8-piece outdoor wicker rattan sectional with oversized cushions and a glass-top table with hidden storage, designed for patio, deck, and backyard lounge setups.",
+        products: [
+            {
+                id: "krofem-8-piece-outdoor-patio-furniture-set-01",
+                name: "KROFEM 8 Pieces Outdoor Wicker Rattan Patio Furniture Sectional Set",
+                description: "A modular 8-piece patio conversation set with seven sofa sections and a glass-top storage table. Built with weather-ready rattan styling for flexible outdoor layouts.",
+                link: "https://amzn.to/4apcRX9",
+                image: "https://m.media-amazon.com/images/I/91DzSEKHGfL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinCurrency: "USD",
+                pinAvailability: "out-of-stock"
+            }
+        ]
     }
 ];

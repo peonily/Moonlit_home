@@ -13,6 +13,7 @@ type ProductLike = {
     price?: string;
     pinPrice?: string;
     pinCurrency?: string;
+    pinAvailability?: "instock" | "out-of-stock";
 };
 
 type InspirationLike = {
@@ -61,6 +62,10 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     const mappedCurrency = PIN_PRICE_MAP[product.id]?.currency;
     const numericPrice = cleanPrice(mappedPrice || product.pinPrice || product.price);
     const priceCurrency = mappedCurrency || product.pinCurrency || "USD";
+    const availability = product.pinAvailability || "instock";
+    const schemaAvailability = availability === "out-of-stock"
+        ? "https://schema.org/OutOfStock"
+        : "https://schema.org/InStock";
     const hasNumericPrice = numericPrice.length > 0;
 
     const productJsonLd: {
@@ -95,7 +100,7 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
             "url": offerUrl,
             "priceCurrency": priceCurrency,
             "price": numericPrice,
-            "availability": "https://schema.org/InStock",
+            "availability": schemaAvailability,
             "itemCondition": "https://schema.org/NewCondition",
         };
     }
@@ -120,7 +125,8 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     <meta property="og:url" content="${pageUrl}" />
     <meta property="og:type" content="product" />
     ${priceMetaTags}
-    <meta property="product:availability" content="instock" />
+    <meta property="product:availability" content="${availability}" />
+    <meta property="og:availability" content="${availability}" />
     <meta property="product:brand" content="${SITE_NAME}" />
     <meta property="product:condition" content="new" />
     <meta property="product:retailer_item_id" content="${product.id}" />
