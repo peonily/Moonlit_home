@@ -5,6 +5,8 @@ export interface Product {
     link: string;
     image: string;
     price?: string;
+    pinPrice?: string;
+    pinCurrency?: string;
 }
 
 export interface Inspiration {
@@ -752,7 +754,9 @@ export const inspirations: Inspiration[] = [
                 description: "This space-saving accent table features a round tabletop and lower shelf to keep books, remotes, or decor within reach. A practical Amazon find for adding functional style beside a sofa, chair, or bed.",
                 link: "https://amzn.to/4rVmrqv",
                 image: "https://m.media-amazon.com/images/I/81TbO7iVVzL._AC_SL1500_.jpg",
-                price: "Check the Price on Amazon"
+                price: "Check the Price on Amazon",
+                pinPrice: "19.98",
+                pinCurrency: "USD"
             }
         ]
     },
@@ -770,7 +774,9 @@ export const inspirations: Inspiration[] = [
                 description: "A modern small-space accent table with a round top and lower shelf, easy assembly, and a versatile profile that works beside a sofa, armchair, or bed.",
                 link: "https://amzn.to/4kLiUZx",
                 image: "https://m.media-amazon.com/images/I/71uc+GBEsIL._AC_SL1500_.jpg",
-                price: "Check the Price on Amazon"
+                price: "Check the Price on Amazon",
+                pinPrice: "38.69",
+                pinCurrency: "USD"
             }
         ]
     }

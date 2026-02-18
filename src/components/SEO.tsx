@@ -8,6 +8,7 @@ interface SEOProps {
     type?: "website" | "article" | "product";
     // Product specific props
     price?: string;
+    pinPrice?: string;
     currency?: string;
     availability?: "instock" | "out-of-stock";
 }
@@ -19,6 +20,7 @@ export const SEO = ({
     url,
     type = "website",
     price,
+    pinPrice,
     currency = "USD",
     availability = "instock",
 }: SEOProps) => {
@@ -38,7 +40,7 @@ export const SEO = ({
         return p.replace(/[^0-9.]/g, "");
     };
 
-    const numericPrice = cleanPrice(price);
+    const numericPrice = cleanPrice(pinPrice || price);
     const hasNumericPrice = numericPrice.length > 0;
 
     // Schema.org JSON-LD
@@ -141,7 +143,7 @@ export const SEO = ({
             {/* Pinterest Product Specifics */}
             {type === "product" ? (
                 <>
-                    <meta property="og:type" content="og:product" />
+                    <meta property="og:type" content="product" />
                     {hasNumericPrice && (
                         <>
                             <meta property="product:price:amount" content={numericPrice} />

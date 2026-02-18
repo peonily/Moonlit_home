@@ -32,6 +32,8 @@ const InspirationDetail = () => {
                 image={singleProduct ? singleProduct.image : inspiration.image}
                 type={singleProduct ? "product" : "article"}
                 price={singleProduct?.price}
+                pinPrice={singleProduct?.pinPrice}
+                currency={singleProduct?.pinCurrency || "USD"}
             />
             <Header />
             <main className="pt-24 pb-20">

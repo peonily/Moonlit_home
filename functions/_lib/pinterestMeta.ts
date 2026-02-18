@@ -9,6 +9,8 @@ type ProductLike = {
     description: string;
     image: string;
     price?: string;
+    pinPrice?: string;
+    pinCurrency?: string;
 };
 
 type InspirationLike = {
@@ -52,7 +54,8 @@ function toAbsoluteImageUrl(image: string): string {
 function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     const fullTitle = `${product.name} | ${SITE_NAME}`;
     const imageUrl = toAbsoluteImageUrl(product.image);
-    const numericPrice = cleanPrice(product.price);
+    const numericPrice = cleanPrice(product.pinPrice || product.price);
+    const priceCurrency = product.pinCurrency || "USD";
     const hasNumericPrice = numericPrice.length > 0;
 
     const productJsonLd: {
@@ -83,7 +86,7 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
         productJsonLd.offers = {
             "@type": "Offer",
             "url": pageUrl,
-            "priceCurrency": "USD",
+            "priceCurrency": priceCurrency,
             "price": numericPrice,
             "availability": "https://schema.org/InStock",
             "itemCondition": "https://schema.org/NewCondition",
@@ -93,9 +96,9 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     const priceMetaTags = hasNumericPrice
         ? `
     <meta property="og:price:amount" content="${numericPrice}" />
-    <meta property="og:price:currency" content="USD" />
+    <meta property="og:price:currency" content="${priceCurrency}" />
     <meta property="product:price:amount" content="${numericPrice}" />
-    <meta property="product:price:currency" content="USD" />`
+    <meta property="product:price:currency" content="${priceCurrency}" />`
         : "";
 
     return `
@@ -107,7 +110,7 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     <meta property="og:description" content="${encodeHtml(product.description)}" />
     <meta property="og:image" content="${imageUrl}" />
     <meta property="og:url" content="${pageUrl}" />
-    <meta property="og:type" content="og:product" />
+    <meta property="og:type" content="product" />
     ${priceMetaTags}
     <meta property="product:availability" content="instock" />
     <meta property="product:brand" content="${SITE_NAME}" />

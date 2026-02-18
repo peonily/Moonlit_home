@@ -42,6 +42,8 @@ const ProductDetail = () => {
                 image={product.image}
                 type="product"
                 price={product.price}
+                pinPrice={product.pinPrice}
+                currency={product.pinCurrency || "USD"}
             />
             <Header />
             <main className="pt-24 pb-20">
