@@ -7,6 +7,8 @@ interface SEOProps {
     url?: string;
     type?: "website" | "article" | "product";
     // Product specific props
+    productId?: string;
+    productLink?: string;
     price?: string;
     pinPrice?: string;
     currency?: string;
@@ -19,6 +21,8 @@ export const SEO = ({
     image,
     url,
     type = "website",
+    productId,
+    productLink,
     price,
     pinPrice,
     currency = "USD",
@@ -42,6 +46,8 @@ export const SEO = ({
 
     const numericPrice = cleanPrice(pinPrice || price);
     const hasNumericPrice = numericPrice.length > 0;
+    const retailerItemId = productId || title?.toLowerCase().replace(/\s+/g, '-') || "product-id";
+    const offerUrl = productLink || canonicalUrl;
 
     // Schema.org JSON-LD
     const getJsonLd = () => {
@@ -51,7 +57,8 @@ export const SEO = ({
                     "@context": string;
                     "@type": string;
                     name: string;
-                    image: string;
+                    image: string[];
+                    sku: string;
                     description?: string;
                     brand: { "@type": string; name: string };
                     offers?: {
@@ -66,7 +73,8 @@ export const SEO = ({
                     "@context": "https://schema.org/",
                     "@type": "Product",
                     "name": title || siteName,
-                    "image": fullImageUrl,
+                    "image": [fullImageUrl],
+                    "sku": retailerItemId,
                     "description": description,
                     "brand": {
                         "@type": "Brand",
@@ -77,7 +85,7 @@ export const SEO = ({
                 if (hasNumericPrice) {
                     productJsonLd.offers = {
                         "@type": "Offer",
-                        "url": canonicalUrl,
+                        "url": offerUrl,
                         "priceCurrency": currency,
                         "price": numericPrice,
                         "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
@@ -138,6 +146,7 @@ export const SEO = ({
             <meta property="og:title" content={fullTitle} />
             {description && <meta property="og:description" content={description} />}
             {fullImageUrl && <meta property="og:image" content={fullImageUrl} />}
+            {fullImageUrl && <meta property="og:image:alt" content={title || siteName} />}
             <meta property="og:url" content={canonicalUrl} />
 
             {/* Pinterest Product Specifics */}
@@ -157,7 +166,7 @@ export const SEO = ({
 
                     <meta property="product:brand" content={siteName} />
                     <meta property="product:condition" content="new" />
-                    <meta property="product:retailer_item_id" content={title?.toLowerCase().replace(/\s+/g, '-') || "product-id"} />
+                    <meta property="product:retailer_item_id" content={retailerItemId} />
                 </>
             ) : (
                 <meta property="og:type" content={type} />

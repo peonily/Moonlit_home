@@ -31,6 +31,8 @@ const InspirationDetail = () => {
                 description={singleProduct ? singleProduct.description : inspiration.description}
                 image={singleProduct ? singleProduct.image : inspiration.image}
                 type={singleProduct ? "product" : "article"}
+                productId={singleProduct?.id}
+                productLink={singleProduct?.link}
                 price={singleProduct?.price}
                 pinPrice={singleProduct?.pinPrice}
                 currency={singleProduct?.pinCurrency || "USD"}
@@ -93,16 +95,22 @@ const InspirationDetail = () => {
                             {inspiration.products.length === 1 && (
                                 <div className="mb-10">
                                     <div className="flex items-center gap-4 mb-6">
-                                        <p className="text-3xl font-serif text-primary font-medium">{inspiration.products[0].price || "Check the Price on Amazon"}</p>
+                                        <p className="text-3xl font-serif text-primary font-medium">{inspiration.products[0].price || "Check Latest Price on Amazon"}</p>
                                         <span className="text-xs text-muted-foreground uppercase tracking-widest border border-border px-2 py-1 rounded">Curated Selection</span>
                                     </div>
                                     <Button
+                                        asChild
                                         className="h-16 px-8 rounded-full text-lg font-medium w-full sm:w-auto shadow-lg shadow-primary/20 hover:shadow-xl hover:scale-[1.02] transition-all"
-                                        onClick={() => window.open(inspiration.products[0].link, '_blank')}
                                     >
-                                        <ShoppingBag className="mr-2 w-5 h-5" />
-                                        Buy Now on Amazon
-                                        <ExternalLink className="ml-2 w-4 h-4 opacity-50" />
+                                        <a
+                                            href={inspiration.products[0].link}
+                                            target="_blank"
+                                            rel="noopener noreferrer nofollow sponsored"
+                                        >
+                                            <ShoppingBag className="mr-2 w-5 h-5" />
+                                            Check Latest Price on Amazon
+                                            <ExternalLink className="ml-2 w-4 h-4 opacity-50" />
+                                        </a>
                                     </Button>
                                     <p className="text-[10px] text-muted-foreground mt-4 uppercase tracking-widest italic">
                                         * As an Amazon Associate, we earn from qualifying purchases.

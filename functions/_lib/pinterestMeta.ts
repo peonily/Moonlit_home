@@ -8,6 +8,7 @@ type ProductLike = {
     id: string;
     name: string;
     description: string;
+    link: string;
     image: string;
     price?: string;
     pinPrice?: string;
@@ -55,6 +56,7 @@ function toAbsoluteImageUrl(image: string): string {
 function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     const fullTitle = `${product.name} | ${SITE_NAME}`;
     const imageUrl = toAbsoluteImageUrl(product.image);
+    const offerUrl = product.link || pageUrl;
     const mappedPrice = PIN_PRICE_MAP[product.id]?.amount;
     const mappedCurrency = PIN_PRICE_MAP[product.id]?.currency;
     const numericPrice = cleanPrice(mappedPrice || product.pinPrice || product.price);
@@ -65,7 +67,8 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
         "@context": string;
         "@type": string;
         name: string;
-        image: string;
+        image: string[];
+        sku: string;
         description: string;
         brand: { "@type": string; name: string };
         offers?: {
@@ -80,7 +83,8 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": product.name,
-        "image": imageUrl,
+        "image": [imageUrl],
+        "sku": product.id,
         "description": product.description,
         "brand": { "@type": "Brand", "name": SITE_NAME },
     };
@@ -88,7 +92,7 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     if (hasNumericPrice) {
         productJsonLd.offers = {
             "@type": "Offer",
-            "url": pageUrl,
+            "url": offerUrl,
             "priceCurrency": priceCurrency,
             "price": numericPrice,
             "availability": "https://schema.org/InStock",
@@ -112,6 +116,7 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     <meta property="og:title" content="${encodeHtml(fullTitle)}" />
     <meta property="og:description" content="${encodeHtml(product.description)}" />
     <meta property="og:image" content="${imageUrl}" />
+    <meta property="og:image:alt" content="${encodeHtml(product.name)}" />
     <meta property="og:url" content="${pageUrl}" />
     <meta property="og:type" content="product" />
     ${priceMetaTags}

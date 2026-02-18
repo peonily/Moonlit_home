@@ -41,6 +41,8 @@ const ProductDetail = () => {
                 description={product.description}
                 image={product.image}
                 type="product"
+                productId={product.id}
+                productLink={product.link}
                 price={product.price}
                 pinPrice={product.pinPrice}
                 currency={product.pinCurrency || "USD"}
@@ -105,7 +107,7 @@ const ProductDetail = () => {
                             </div>
 
                             <div className="flex items-center gap-4 mb-8">
-                                <p className="text-3xl font-serif text-primary font-medium">{product.price || "Check the Price on Amazon"}</p>
+                                <p className="text-3xl font-serif text-primary font-medium">{product.price || "Check Latest Price on Amazon"}</p>
                                 <span className="text-xs text-muted-foreground uppercase tracking-widest border border-border px-2 py-1 rounded">In Stock</span>
                             </div>
 
@@ -136,12 +138,18 @@ const ProductDetail = () => {
 
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
+                                    asChild
                                     className="h-16 px-8 rounded-full text-lg font-medium flex-grow shadow-lg shadow-primary/20 hover:shadow-xl hover:scale-[1.02] transition-all"
-                                    onClick={() => window.open(product.link, '_blank')}
                                 >
-                                    <ShoppingCart className="mr-2 w-5 h-5" />
-                                    Buy Now on Amazon
-                                    <ExternalLink className="ml-2 w-4 h-4 opacity-50" />
+                                    <a
+                                        href={product.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer nofollow sponsored"
+                                    >
+                                        <ShoppingCart className="mr-2 w-5 h-5" />
+                                        Check Latest Price on Amazon
+                                        <ExternalLink className="ml-2 w-4 h-4 opacity-50" />
+                                    </a>
                                 </Button>
                             </div>
 
