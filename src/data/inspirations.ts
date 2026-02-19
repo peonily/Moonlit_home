@@ -24,6 +24,28 @@ export interface Inspiration {
 
 export const inspirations: Inspiration[] = [
     {
+        id: "vasagle-round-side-table-inspiration",
+        slug: "vasagle-round-side-table-ulet56bx",
+        categories: ["amazon-finds", "pieces", "living-room"],
+        image: "https://m.media-amazon.com/images/I/710Tn7ANRnL._AC_SL1500_.jpg",
+        name: "VASAGLE 21.7-Inch Round Side Table",
+        description: "A compact 2-tier round side table with a steel frame and spacious top, designed for small-space living rooms and bedrooms.",
+        products: [
+            {
+                id: "vasagle-round-side-table-ulet56bx-01",
+                sku: "B07XXP5S3T",
+                brand: "VASAGLE",
+                name: "VASAGLE 21.7-Inch Round Side Table, 2-Tier End Table, Nightstand with Steel Frame, Spacious Top, for Small Spaces, Living Room, Bedroom, Rustic Brown and Ink Black ULET56BX",
+                description: "A space-saving round accent table with two tiers for books and decor, blending a rustic brown surface with an ink-black steel frame.",
+                link: "https://amzn.to/4aJSkeL",
+                image: "https://m.media-amazon.com/images/I/710Tn7ANRnL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinCurrency: "USD",
+                pinAvailability: "instock"
+            }
+        ]
+    },
+    {
         id: "living-minimalist-1",
         slug: "serene-arched-mirror-living-room",
         categories: ["living-room", "minimalist"],
@@ -919,28 +941,6 @@ export const inspirations: Inspiration[] = [
                 description: "Slim and space-saving with a rustic brown and black finish, this VASAGLE side table includes multi-tier storage for decor, books, and everyday essentials.",
                 link: "https://amzn.to/4aWOL65",
                 image: "https://m.media-amazon.com/images/I/710dzP6sR8L._AC_SL1500_.jpg",
-                price: "Check the Price on Amazon",
-                pinCurrency: "USD",
-                pinAvailability: "instock"
-            }
-        ]
-    },
-    {
-        id: "vasagle-round-side-table-inspiration",
-        slug: "vasagle-round-side-table-ulet56bx",
-        categories: ["amazon-finds", "pieces", "living-room"],
-        image: "https://m.media-amazon.com/images/I/710Tn7ANRnL._AC_SL1500_.jpg",
-        name: "VASAGLE 21.7-Inch Round Side Table",
-        description: "A compact 2-tier round side table with a steel frame and spacious top, designed for small-space living rooms and bedrooms.",
-        products: [
-            {
-                id: "vasagle-round-side-table-ulet56bx-01",
-                sku: "B07XXP5S3T",
-                brand: "VASAGLE",
-                name: "VASAGLE 21.7-Inch Round Side Table, 2-Tier End Table, Nightstand with Steel Frame, Spacious Top, for Small Spaces, Living Room, Bedroom, Rustic Brown and Ink Black ULET56BX",
-                description: "A space-saving round accent table with two tiers for books and decor, blending a rustic brown surface with an ink-black steel frame.",
-                link: "https://amzn.to/4aJSkeL",
-                image: "https://m.media-amazon.com/images/I/710Tn7ANRnL._AC_SL1500_.jpg",
                 price: "Check the Price on Amazon",
                 pinCurrency: "USD",
                 pinAvailability: "instock"
