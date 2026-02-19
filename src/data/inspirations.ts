@@ -860,5 +860,25 @@ export const inspirations: Inspiration[] = [
                 pinAvailability: "out-of-stock"
             }
         ]
+    },
+    {
+        id: "ashley-alisdair-nightstand-inspiration",
+        slug: "ashley-alisdair-traditional-nightstand",
+        categories: ["amazon-finds", "pieces", "bedroom"],
+        image: "https://m.media-amazon.com/images/I/616m5Dj1OTL._AC_SL1500_.jpg",
+        name: "Signature Design by Ashley Alisdair Traditional 2 Drawer Nightstand",
+        description: "A traditional dark-brown two-drawer nightstand with a compact footprint and classic details for bedroom spaces.",
+        products: [
+            {
+                id: "ashley-alisdair-nightstand-01",
+                name: "Signature Design by Ashley Alisdair Traditional 2 Drawer Nightstand, 23.75\" Tall, Dark Brown",
+                description: "Classic bedside storage with two drawers and a timeless profile. Use this affiliate link to check the latest seller offers on Amazon.",
+                link: "https://amzn.to/4rHSESF",
+                image: "https://m.media-amazon.com/images/I/616m5Dj1OTL._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinCurrency: "USD",
+                pinAvailability: "out-of-stock"
+            }
+        ]
     }
 ];
