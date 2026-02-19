@@ -32,6 +32,8 @@ const InspirationDetail = () => {
                 image={primaryProduct ? primaryProduct.image : inspiration.image}
                 type={primaryProduct ? "product" : "article"}
                 productId={primaryProduct?.id}
+                sku={primaryProduct?.sku}
+                brand={primaryProduct?.brand}
                 productLink={primaryProduct?.link}
                 price={primaryProduct?.price}
                 pinPrice={primaryProduct?.pinPrice}

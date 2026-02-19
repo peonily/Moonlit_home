@@ -42,6 +42,8 @@ const ProductDetail = () => {
                 image={product.image}
                 type="product"
                 productId={product.id}
+                sku={product.sku}
+                brand={product.brand}
                 productLink={product.link}
                 price={product.price}
                 pinPrice={product.pinPrice}

@@ -4,6 +4,8 @@ export interface Product {
     description: string;
     link: string;
     image: string;
+    sku?: string;
+    brand?: string;
     price?: string;
     pinPrice?: string;
     pinCurrency?: string;
@@ -895,6 +897,28 @@ export const inspirations: Inspiration[] = [
                 description: "A two-piece bedside table set with drawer and lower storage, sized for bedroom use and easy pairing with modern or rustic decor styles.",
                 link: "https://amzn.to/4tIFAxA",
                 image: "https://m.media-amazon.com/images/I/81L0zMXsS3L._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinCurrency: "USD",
+                pinAvailability: "instock"
+            }
+        ]
+    },
+    {
+        id: "vasagle-side-table-nightstand-inspiration",
+        slug: "vasagle-side-table-nightstand-ulet273b01",
+        categories: ["amazon-finds", "pieces", "bedroom"],
+        image: "https://m.media-amazon.com/images/I/710dzP6sR8L._AC_SL1500_.jpg",
+        name: "VASAGLE Side Table, Small End Table, Tall Nightstand",
+        description: "A compact industrial-style side table with three open storage shelves, designed for living rooms, bedrooms, offices, and bathrooms.",
+        products: [
+            {
+                id: "vasagle-side-table-ulet273b01-01",
+                sku: "B08JV2MTWZ",
+                brand: "VASAGLE",
+                name: "VASAGLE Side Table, Small End Table, Tall Nightstand for Living Room, Bedroom, Office, Bathroom, Rustic Brown and Classic Black ULET273B01",
+                description: "Slim and space-saving with a rustic brown and black finish, this VASAGLE side table includes multi-tier storage for decor, books, and everyday essentials.",
+                link: "https://amzn.to/4aWOL65",
+                image: "https://m.media-amazon.com/images/I/710dzP6sR8L._AC_SL1500_.jpg",
                 price: "Check the Price on Amazon",
                 pinCurrency: "USD",
                 pinAvailability: "instock"

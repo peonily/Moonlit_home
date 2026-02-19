@@ -1,5 +1,4 @@
 import { inspirations } from "../../src/data/inspirations";
-import { PIN_PRICE_MAP } from "./pinPriceMap";
 
 const SITE_URL = "https://moonlit-home-decor.com";
 const SITE_NAME = "Moonlit Home Decor";
@@ -10,6 +9,8 @@ type ProductLike = {
     description: string;
     link: string;
     image: string;
+    sku?: string;
+    brand?: string;
     price?: string;
     pinPrice?: string;
     pinCurrency?: string;
@@ -34,11 +35,6 @@ for (const inspiration of inspirations as InspirationLike[]) {
     }
 }
 
-function cleanPrice(price?: string): string {
-    if (!price) return "";
-    return price.replace(/[^0-9.]/g, "");
-}
-
 function encodeHtml(str: string): string {
     return str
         .replace(/&/g, "&amp;")
@@ -58,82 +54,52 @@ function buildProductMetaTags(product: ProductLike, pageUrl: string): string {
     const fullTitle = `${product.name} | ${SITE_NAME}`;
     const imageUrl = toAbsoluteImageUrl(product.image);
     const offerUrl = product.link || pageUrl;
-    const mappedPrice = PIN_PRICE_MAP[product.id]?.amount;
-    const mappedCurrency = PIN_PRICE_MAP[product.id]?.currency;
-    const numericPrice = cleanPrice(mappedPrice || product.pinPrice || product.price);
-    const priceCurrency = mappedCurrency || product.pinCurrency || "USD";
+    const productSku = product.sku || product.id;
+    const productBrand = product.brand || SITE_NAME;
     const availability = product.pinAvailability || "instock";
     const schemaAvailability = availability === "out-of-stock"
         ? "https://schema.org/OutOfStock"
         : "https://schema.org/InStock";
-    const hasNumericPrice = numericPrice.length > 0;
 
     const productJsonLd: {
         "@context": string;
         "@type": string;
         name: string;
         image: string[];
-        sku: string;
         description: string;
+        sku: string;
         brand: { "@type": string; name: string };
-        offers?: {
+        offers: {
             "@type": string;
             url: string;
-            priceCurrency: string;
-            price: string;
             availability: string;
-            itemCondition: string;
         };
     } = {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": product.name,
         "image": [imageUrl],
-        "sku": product.id,
         "description": product.description,
-        "brand": { "@type": "Brand", "name": SITE_NAME },
-    };
-
-    if (hasNumericPrice) {
-        productJsonLd.offers = {
+        "sku": productSku,
+        "brand": { "@type": "Brand", "name": productBrand },
+        "offers": {
             "@type": "Offer",
             "url": offerUrl,
-            "priceCurrency": priceCurrency,
-            "price": numericPrice,
             "availability": schemaAvailability,
-            "itemCondition": "https://schema.org/NewCondition",
-        };
-    }
-
-    const priceMetaTags = hasNumericPrice
-        ? `
-    <meta property="og:price:amount" content="${numericPrice}" />
-    <meta property="og:price:currency" content="${priceCurrency}" />
-    <meta property="product:price:amount" content="${numericPrice}" />
-    <meta property="product:price:currency" content="${priceCurrency}" />`
-        : "";
+        },
+    };
 
     return `
     <title>${encodeHtml(fullTitle)}</title>
     <meta name="description" content="${encodeHtml(product.description)}" />
     <link rel="canonical" href="${pageUrl}" />
+    <meta property="og:type" content="product" />
     <meta property="og:site_name" content="${SITE_NAME}" />
     <meta property="og:title" content="${encodeHtml(fullTitle)}" />
     <meta property="og:description" content="${encodeHtml(product.description)}" />
     <meta property="og:image" content="${imageUrl}" />
     <meta property="og:image:alt" content="${encodeHtml(product.name)}" />
-    <meta property="og:url" content="${pageUrl}" />
-    <meta property="og:type" content="product" />
-    ${priceMetaTags}
     <meta property="product:availability" content="${availability}" />
-    <meta property="og:availability" content="${availability}" />
-    <meta property="product:brand" content="${SITE_NAME}" />
-    <meta property="product:condition" content="new" />
-    <meta property="product:retailer_item_id" content="${product.id}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${encodeHtml(fullTitle)}" />
-    <meta name="twitter:description" content="${encodeHtml(product.description)}" />
-    <meta name="twitter:image" content="${imageUrl}" />
     <script type="application/ld+json">${JSON.stringify(productJsonLd)}</script>`;
 }
 

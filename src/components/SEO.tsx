@@ -8,6 +8,8 @@ interface SEOProps {
     type?: "website" | "article" | "product";
     // Product specific props
     productId?: string;
+    sku?: string;
+    brand?: string;
     productLink?: string;
     price?: string;
     pinPrice?: string;
@@ -22,10 +24,9 @@ export const SEO = ({
     url,
     type = "website",
     productId,
+    sku,
+    brand,
     productLink,
-    price,
-    pinPrice,
-    currency = "USD",
     availability = "instock",
 }: SEOProps) => {
     const siteName = "Moonlit Home Decor";
@@ -38,15 +39,8 @@ export const SEO = ({
         ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
         : `${siteUrl}/og-image.png`;
 
-    // Clean price-like strings for structured data/meta tags.
-    const cleanPrice = (p?: string) => {
-        if (!p) return "";
-        return p.replace(/[^0-9.]/g, "");
-    };
-
-    const numericPrice = cleanPrice(pinPrice || price);
-    const hasNumericPrice = numericPrice.length > 0;
-    const retailerItemId = productId || title?.toLowerCase().replace(/\s+/g, '-') || "product-id";
+    const retailerItemId = sku || productId || title?.toLowerCase().replace(/\s+/g, '-') || "product-id";
+    const productBrand = brand || siteName;
     const offerUrl = productLink || canonicalUrl;
 
     // Schema.org JSON-LD
@@ -59,39 +53,30 @@ export const SEO = ({
                     name: string;
                     image: string[];
                     sku: string;
-                    description?: string;
+                    description: string;
                     brand: { "@type": string; name: string };
-                    offers?: {
+                    offers: {
                         "@type": string;
                         url: string;
-                        priceCurrency: string;
-                        price: string;
                         availability: string;
-                        itemCondition: string;
                     };
                 } = {
                     "@context": "https://schema.org/",
                     "@type": "Product",
                     "name": title || siteName,
                     "image": [fullImageUrl],
+                    "description": description || "",
                     "sku": retailerItemId,
-                    "description": description,
                     "brand": {
                         "@type": "Brand",
-                        "name": siteName
+                        "name": productBrand
                     },
-                };
-
-                if (hasNumericPrice) {
-                    productJsonLd.offers = {
+                    "offers": {
                         "@type": "Offer",
                         "url": offerUrl,
-                        "priceCurrency": currency,
-                        "price": numericPrice,
-                        "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-                        "itemCondition": "https://schema.org/NewCondition"
-                    };
-                }
+                        "availability": availability === "instock" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+                    }
+                };
 
                 return productJsonLd;
             }
@@ -142,34 +127,26 @@ export const SEO = ({
             <link rel="canonical" href={canonicalUrl} />
 
             {/* Open Graph Tags */}
-            <meta property="og:site_name" content={siteName} />
-            <meta property="og:title" content={fullTitle} />
-            {description && <meta property="og:description" content={description} />}
-            {fullImageUrl && <meta property="og:image" content={fullImageUrl} />}
-            {fullImageUrl && <meta property="og:image:alt" content={title || siteName} />}
-            <meta property="og:url" content={canonicalUrl} />
-
-            {/* Pinterest Product Specifics */}
             {type === "product" ? (
                 <>
                     <meta property="og:type" content="product" />
-                    {hasNumericPrice && (
-                        <>
-                            <meta property="product:price:amount" content={numericPrice} />
-                            <meta property="product:price:currency" content={currency} />
-                            <meta property="og:price:amount" content={numericPrice} />
-                            <meta property="og:price:currency" content={currency} />
-                        </>
-                    )}
+                    <meta property="og:site_name" content={siteName} />
+                    <meta property="og:title" content={fullTitle} />
+                    {description && <meta property="og:description" content={description} />}
+                    {fullImageUrl && <meta property="og:image" content={fullImageUrl} />}
+                    {fullImageUrl && <meta property="og:image:alt" content={title || siteName} />}
                     <meta property="product:availability" content={availability} />
-                    <meta property="og:availability" content={availability} />
-
-                    <meta property="product:brand" content={siteName} />
-                    <meta property="product:condition" content="new" />
-                    <meta property="product:retailer_item_id" content={retailerItemId} />
                 </>
             ) : (
-                <meta property="og:type" content={type} />
+                <>
+                    <meta property="og:site_name" content={siteName} />
+                    <meta property="og:title" content={fullTitle} />
+                    {description && <meta property="og:description" content={description} />}
+                    {fullImageUrl && <meta property="og:image" content={fullImageUrl} />}
+                    {fullImageUrl && <meta property="og:image:alt" content={title || siteName} />}
+                    <meta property="og:url" content={canonicalUrl} />
+                    <meta property="og:type" content={type} />
+                </>
             )}
 
             {/* Twitter Card Tags */}
