@@ -880,5 +880,25 @@ export const inspirations: Inspiration[] = [
                 pinAvailability: "out-of-stock"
             }
         ]
+    },
+    {
+        id: "vecelo-night-stands-inspiration",
+        slug: "vecelo-night-stands-set-of-2",
+        categories: ["amazon-finds", "pieces", "bedroom"],
+        image: "https://m.media-amazon.com/images/I/81L0zMXsS3L._AC_SL1500_.jpg",
+        name: "VECELO Night Stands for Bedroom (Set of 2)",
+        description: "A rustic-brown nightstand set with drawer storage designed for bedrooms and bedside use. This affiliate listing is ideal for compact spaces that need matching end tables with practical storage.",
+        products: [
+            {
+                id: "vecelo-night-stands-set-01",
+                name: "VECELO Night Stands for Bedroom Nightstand Bedside End Tables with Drawer Storage (Set of 2), Rustic Brown",
+                description: "A two-piece bedside table set with drawer and lower storage, sized for bedroom use and easy pairing with modern or rustic decor styles.",
+                link: "https://amzn.to/4tIFAxA",
+                image: "https://m.media-amazon.com/images/I/81L0zMXsS3L._AC_SL1500_.jpg",
+                price: "Check the Price on Amazon",
+                pinCurrency: "USD",
+                pinAvailability: "instock"
+            }
+        ]
     }
 ];
